@@ -27,7 +27,7 @@
 
 body {
   padding: 0;
-  font-family: 'Source Sans', sans-serif;
+  font-family: 'Avenir', sans-serif;
 }
 
 #landing {
@@ -44,18 +44,44 @@ model-viewer {
   z-index: -1;
 }
 
-.header {
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 900;
+.buttons {
+  position: absolute;
+  z-index: 1;
+  padding: 10px 15px;
+}
+
+button {
+    font-family: 'Avenir', sans-serif;
+		background-color: #ffffff00;
+    color: #FFF;
+    border: 0;
+		padding: 10px 15px;
+		border-radius: 3px;
+		cursor: pointer;
+		font-size: 18px;
+		transition-duration: 0.1s;
+    opacity: 0.8;
+}
+
+
+button:hover {opacity: 1}
+
+.intro {
   color: white;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  font-size: 10vw;
+  font-size: 18px;
   line-height: 0.8;
   z-index: 1;
+}
+
+.header {
+  font-size: 10vw;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 900;
 }
 
 
