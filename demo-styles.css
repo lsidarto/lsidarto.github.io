@@ -34,6 +34,9 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  justify-content: space-between;
+  align-items: flex-end;
+
 }
 
 model-viewer {
