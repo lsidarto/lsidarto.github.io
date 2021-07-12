@@ -73,7 +73,7 @@ model-viewer {
 }
 
 .header {
-  font-size: 600%;
+  font-size: 10vw;
   font-family: 'Quicksand', sans-serif;
   font-weight: 900;
 }
