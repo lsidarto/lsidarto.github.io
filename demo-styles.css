@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   padding: 0;
   font-family: 'Avenir', sans-serif;
@@ -69,7 +73,7 @@ model-viewer {
   animation: float 5s ease-in-out infinite alternate;
 }
 @keyframes float {
-  50%{ transform: translate(-50%, -52%);}
+  25%{ transform: translate(-50%, -53%);}
 }
 
 .header {
@@ -141,4 +145,32 @@ footer {
     transform: rotate(-45deg) translate(0, 0);
   }
 }
-  
+
+.bodytext {
+  position:relative;
+  padding-top: 20%;
+  /* padding-left: 10%; */
+  color: white;
+}
+
+#pfp {
+  display: block;
+  width: 200px;
+  margin-right: 5%;
+  float: right;
+  /* max-width: 100%; change this when u get a photo*/ 
+  /* height: auto; */
+}
+
+.col {
+  float: left;
+  width: 40%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
