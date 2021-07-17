@@ -30,7 +30,7 @@ h2{
 }
 
 
-/* background */
+/* background desktop */
 
 model-viewer {
   width: 100%;
@@ -147,9 +147,13 @@ model-viewer {
   animation: float 2s ease-in-out infinite alternate; 
 }
 
+#biotext p {
+  padding-right: 10px;
+}
+
 #pfp {
   display: block;
-  width: 200px;
+  width: 10em;
   margin-right: 5%;
   float: right;
   border-radius: 50%;
@@ -162,7 +166,7 @@ model-viewer {
 
 .col {
   float: left;
-  width: 45%;
+  width: 50%;
 }
 
 .row:after {
@@ -189,11 +193,14 @@ model-viewer {
   min-height: 500px;
 }
 
+
+
 /* article cards: mobile */
 @media (max-width: 480px) {
-  .card_container_mobile{display: grid;
+  .card_container_mobile{
+    display: grid;
     justify-content: center;
-    padding: 5px;
+    width: 100%;
     min-height: 500px;}
   .card_container_desktop {display: none;}
   .card_img {
@@ -201,7 +208,18 @@ model-viewer {
     max-width: 100%;
     object-fit: cover;
     height: auto;}
+  .card_figure {
+    width: 45%;
+  }
 }
+/* 
+
+.card_figure {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+} */
 
 .card {
   width: 270px;
@@ -232,13 +250,6 @@ model-viewer {
   to{ transform: translateY(-0);}
 }
 
-.card_figure {
-  margin-top: 0;
-  margin-right: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-}
-
 .card_img {
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
@@ -247,8 +258,8 @@ model-viewer {
 }
 
 .card_text {
-  padding-right: 5px; 
-  padding-left: 10px;
+  padding-right: 2%; 
+  padding-left: 3%;
   margin-top: 0px;
   margin-bottom: 5px;
 }
