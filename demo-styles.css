@@ -32,7 +32,11 @@ h2{
 
 /* background desktop */
 
-model-viewer {
+.model_mobile {
+  display: none;
+ }
+
+.model_desktop {
   width: 100%;
   height: 100vh;
   background-color: #BA5B4C;
@@ -195,8 +199,9 @@ model-viewer {
 
 
 
-/* article cards: mobile */
+/* for mobile */
 @media (max-width: 480px) {
+  /* article cards */
   .card_container_mobile{
     display: grid;
     justify-content: center;
@@ -211,6 +216,19 @@ model-viewer {
   .card_figure {
     width: 45%;
   }
+
+  /* model */
+  .model_desktop {
+   display: none;
+  }
+  .model_mobile {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    /* background-color: #BA5B4C;
+    --poster-color: #ffffff00; */
+    z-index: -1;
+   }
 }
 /* 
 
