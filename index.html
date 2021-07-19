@@ -10,14 +10,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
 
+    <!-- fonts -->
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Solway:wght@500&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap');
-
     </style>
    
+    <script src = "script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/MotionPathPlugin.min.js"></script>
  </head> 
  <body>
   <div id="nav"> 
@@ -42,12 +45,53 @@
       <img class = "layer l3" src = "resources/l3.png">
       <img class = "layer l4" src = "resources/l4.png">
   
+      <!-- <img class = "b1" src = "b.png"> -->
+      <!-- <div class = "bird b1"></div> -->
 
-      <div class = "bird b1"></div>
-      <div class = "bird b2"></div>
+      <!-- <svg id="motionPath" viewBox="-20 0 557 190">
+        <path id="path" fill="none" d="M 464 -55 C 372 130 320 291 -110 162"/>
+        <g class="astronaut">
+        <path fill="#7592A0" d="M4.4-1.5C2.5,3.4,2.3,7.8,4.4,12.1c1.6,3.2-1.8,3.2-3,4.4c-2.3,2.3-3.3-1-5-1.4
+                c-3-0.7-1.1-2.5-0.6-3.4c2.2-4.4,1.7-8.6-0.1-13.3C-8.9,5.6-13.2,3.5-18.6,2c-3.6-1-7.3-6.2-8.4-12.3c7.9,3.4,13.3-2.2,20.8,2.9
+                c1.8,1.2,2.5-1.2,3.1-2.6c1.1-2.4,1-5.2,2.9-7.2c0.4-0.4,0.5-0.2,0.8,0.2c1.8,2.9,1.1,7.3,3.8,9.1c3,2,3-2.1,6.2-2.1
+                c5.3-0.1,10.5,0.9,16.3-0.4c-0.8,5.7-4.4,9.8-7.8,11.8C13.1,5,8.2,2.8,4.4-1.5"/>
+        </g>
+      </svg> -->
+
+      
+    
+      <svg width="100%" height="100%" viewBox="-20 0 557 190" id="svg">
+        <path class="path" d="M 464 -55 C 372 130 320 291 -110 162"/>
+        <g class="bird">
+          <path id="b1" d="M4.4-1.5C2.5,3.4,2.3,7.8,4.4,12.1c1.6,3.2-1.8,3.2-3,4.4c-2.3,2.3-3.3-1-5-1.4
+                c-3-0.7-1.1-2.5-0.6-3.4c2.2-4.4,1.7-8.6-0.1-13.3C-8.9,5.6-13.2,3.5-18.6,2c-3.6-1-7.3-6.2-8.4-12.3c7.9,3.4,13.3-2.2,20.8,2.9
+                c1.8,1.2,2.5-1.2,3.1-2.6c1.1-2.4,1-5.2,2.9-7.2c0.4-0.4,0.5-0.2,0.8,0.2c1.8,2.9,1.1,7.3,3.8,9.1c3,2,3-2.1,6.2-2.1
+                c5.3-0.1,10.5,0.9,16.3-0.4c-0.8,5.7-4.4,9.8-7.8,11.8C13.1,5,8.2,2.8,4.4-1.5"/>
+        </g>
+      </svg>
+
+      <!-- move this into js file -->
+      <script>
+      gsap.registerPlugin(MotionPathPlugin);
+
+      gsap.to(".bird", {
+        duration: 3, 
+        repeat: 12,
+        repeatDelay: 3,
+        ease: "power1.inOut",
+        motionPath:{
+          path: ".path",
+          align: ".path",
+          autoRotate: 90,
+          alignOrigin: [0.5, 0.5]
+        }
+      });
+      </script>
+
+      <!-- <div class = "bird b2"></div>
       <div class = "bird b3"></div>
       <div class = "bird b4"></div>
-      <div class = "bird b5"></div>
+      <div class = "bird b5"></div> -->
 
     </div>
     <!-- <img class="model_desktop" src="resources/IMG_1965.jpg"> -->
@@ -242,7 +286,10 @@
   <script nomodule
       src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
   </script>
+
+
+  </body>
+
+
   
-  <script src = "script.js"></script>
-</body>
 </html>

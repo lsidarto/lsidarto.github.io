@@ -55,25 +55,54 @@ body {
 }
 
 
-.bird {
-  width: 1.2rem;
+/* .bird { */
+  /* width: 1.2rem;
   height: 1.2rem;
-  border-radius: 50%;
-  position: absolute;
-  z-index: -3;
-  top: 0;
-  left: 0;
-  offset-distance: 0;
+  border-radius: 50%; */
+  /* position: absolute; */
+  /* z-index: -3; */
+  /* top: 0;
+  left: 0; */
+   /* offset-distance: 0; */
 
-}
+/* } */
 
-.b1 {
+
+/* .b1 {
   offset-path: path("M 2367 -37 C 782 -30 1548 642 -123 416");
   animation: move 5s linear infinite;
   background-color: red;
+} */
+
+svg {
+    /* top: 0;
+    left: 0;
+    position: absolute; */
+  /*   overflow: visible; */
+  /*   height: 100%; */
+    z-index: -3;
+    position: absolute;
+    /* Fix Safari rendering bug */
+    transform: translateZ(0);
+  }
+  
+.path {
+  /* turn these on to see paths*/
+  stroke-width: 2;
+  stroke: gray; 
+  fill: none;
+  /* display: none; */
 }
 
+g.bird {
+  /* offset-path: path("M 2367 -37 C 782 -30 1548 642 -123 416");
+  animation: move 5s linear infinite;
+  background-color: red; */
+  fill: white;
+  z-index: 5;
+}
 
+/* 
 .b2 {
   offset-path: path("M 464 -55 C 372 130 320 291 -110 162");
   animation: move 2s linear infinite;
@@ -96,45 +125,6 @@ body {
   offset-path: path("M 1202 -37 C 782 -30 429 29 -17 369");
   animation: move 3s linear infinite;
   background-color: green;
-}
-
-/* .b1 {
-  offset-path: path('M533.827,30.096 C499.731,21.033 423.412,5.47 393.778,6.554 227.747,12.622 -10.282,225.7 -14.499,191.944 ');
-	animation: move 5s infinite ease-in-out;
-	background-color: salmon;
-  top: 20%;
-  left: 20%; 
-}*/
-
-/* .b2 {
-  offset-path: path('M533.456,4.913 C503.314,12.739 401.925,18.723 364.175,42.653 324.156,68.017 224.476,155.141 177.164,167.888 143.116,177.061 1.284,199.029 -22.483,196.245 ');
-	animation: move 3s infinite ease-in-out;
-	background-color: green;
-  top: 5%;
-}
-
-
-.b3 {
-  offset-path: path('M-25.029,188.039 C8.077,209.576 186.359,134.381 266.728,103.906 333.268,78.656 496.644,27.179 536.714,26.109 ');
-	animation: move 2.5s reverse infinite ease-in-out;
-	background-color: blue;
-  top: 30%;
-  left: 40%;
-}
-
-.b4 {
-  offset-path: path('M533.456,4.913 C503.314,12.739 524.357,196.669 398.371,226.11 352.23,236.892 250.612,177.017 97.778,159.192 62.745,155.103 -19.511,193.66 -22.483,217.517 ');
-	animation: move 2.5s infinite ease-in-out;
-	background-color: teal;
-  top: 0%;
-}
-
-.b5 {
-  offset-path: path('M533.827,30.096 C499.731,21.033 423.412,5.47 393.778,6.554 227.747,12.622 -10.282,225.7 -14.499,191.944 ');
-	animation: move 5s infinite ease-in-out;
-	background-color: salmon;
-  bottom: 20%;
-  right: 20%;
 } */
 
 
@@ -142,8 +132,14 @@ body {
 	to {
     offset-distance: 100%;
   }
-  
 }
+
+@-webkit-keyframes move {
+	to {
+    offset-distance: 100%;
+  }
+}
+
 
 
 section {
