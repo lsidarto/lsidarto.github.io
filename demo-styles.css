@@ -18,6 +18,134 @@ body {
   background: linear-gradient(#BA5B4C,#BA5B4C,#984437)
 }
 
+.pictest {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+}
+
+.layer{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  object-fit:cover;
+}
+
+.l4 {
+  z-index: -5
+}
+.l3 {
+  animation: house 2s alternate-reverse infinite ; 
+  z-index: -4
+}
+.l2 {
+  animation: house 1s alternate-reverse infinite ; 
+  z-index: -2
+}
+.l1 {
+  animation: house 3s alternate-reverse infinite ; 
+  z-index: -1
+}
+
+@keyframes house {
+  100%{transform: scale(1.01);}
+}
+
+
+.bird {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -3;
+  top: 0;
+  left: 0;
+  offset-distance: 0;
+
+}
+
+.b1 {
+  offset-path: path("M 2367 -37 C 782 -30 1548 642 -123 416");
+  animation: move 5s linear infinite;
+  background-color: red;
+}
+
+
+.b2 {
+  offset-path: path("M 464 -55 C 372 130 320 291 -110 162");
+  animation: move 2s linear infinite;
+  background-color: orange;
+}
+
+.b3 {
+  offset-path: path("M 2367 -37 C 782 -30 429 29 -37 802");
+  animation: move 4s linear infinite;
+  background-color: salmon;
+}
+
+.b4 {
+  offset-path: path("M 1351 -4 C 1186 767 664 784 -7 552");
+  animation: move 3s linear infinite;
+  background-color: yellow;
+}
+
+.b5 {
+  offset-path: path("M 1202 -37 C 782 -30 429 29 -17 369");
+  animation: move 3s linear infinite;
+  background-color: green;
+}
+
+/* .b1 {
+  offset-path: path('M533.827,30.096 C499.731,21.033 423.412,5.47 393.778,6.554 227.747,12.622 -10.282,225.7 -14.499,191.944 ');
+	animation: move 5s infinite ease-in-out;
+	background-color: salmon;
+  top: 20%;
+  left: 20%; 
+}*/
+
+/* .b2 {
+  offset-path: path('M533.456,4.913 C503.314,12.739 401.925,18.723 364.175,42.653 324.156,68.017 224.476,155.141 177.164,167.888 143.116,177.061 1.284,199.029 -22.483,196.245 ');
+	animation: move 3s infinite ease-in-out;
+	background-color: green;
+  top: 5%;
+}
+
+
+.b3 {
+  offset-path: path('M-25.029,188.039 C8.077,209.576 186.359,134.381 266.728,103.906 333.268,78.656 496.644,27.179 536.714,26.109 ');
+	animation: move 2.5s reverse infinite ease-in-out;
+	background-color: blue;
+  top: 30%;
+  left: 40%;
+}
+
+.b4 {
+  offset-path: path('M533.456,4.913 C503.314,12.739 524.357,196.669 398.371,226.11 352.23,236.892 250.612,177.017 97.778,159.192 62.745,155.103 -19.511,193.66 -22.483,217.517 ');
+	animation: move 2.5s infinite ease-in-out;
+	background-color: teal;
+  top: 0%;
+}
+
+.b5 {
+  offset-path: path('M533.827,30.096 C499.731,21.033 423.412,5.47 393.778,6.554 227.747,12.622 -10.282,225.7 -14.499,191.944 ');
+	animation: move 5s infinite ease-in-out;
+	background-color: salmon;
+  bottom: 20%;
+  right: 20%;
+} */
+
+
+@keyframes move {
+	to {
+    offset-distance: 100%;
+  }
+  
+}
+
+
 section {
   position: relative;
   width: 100%;
@@ -32,9 +160,9 @@ h2{
 
 /* background desktop */
 
-.model_mobile {
+/* .model_mobile {
   display: none;
- }
+ } */
 
 .model_desktop {
   width: 100%;
@@ -52,7 +180,7 @@ h2{
   left: 0;
   width: 100%;
   z-index: 1;
-  background-color: rgb(186,91,76);
+  /* background-color: rgba(255, 255, 255, 0.3); */
 
 }
 
@@ -76,22 +204,28 @@ h2{
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
   text-align: center;
-  font-size: 2vw;
-  line-height: 0.8;
+  line-height: 0.9;
   z-index: 1;
   mix-blend-mode: color-dodge;
   animation: headerfloat 2s ease-in-out infinite alternate; 
 }
+
+.intro p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 2vw;
+}
+
 @keyframes headerfloat {
-  to{ transform: translate(-50%, -53%);}
+  to{ transform: translate(0%, -2%);}
+
+  /* 50% -53% */
 }
 
 .header {
   font-size: 10vw;
   color: #92b2bf !important;
-  font-family: 'Quicksand', sans-serif !important;
   font-weight: 900;
 }
 
@@ -102,7 +236,7 @@ h2{
   bottom: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
-  opacity: 0.6;
+  opacity: 0.8;
   z-index: 1;
   font-size: 12px;
   letter-spacing: .05em;
@@ -202,11 +336,11 @@ h2{
 /* for mobile */
 @media (max-width: 480px) {
   /* article cards */
-  .card_container_mobile{
+  /* .card_container_mobile{
     display: grid;
     justify-content: center;
     width: 100%;
-    min-height: 500px;}
+    min-height: 500px;} */
   .card_container_desktop {display: none;}
   .card_img {
     border-radius: 20px;
