@@ -98,51 +98,10 @@ body {
   background-color: green;
 }
 
-/* .b1 {
-  offset-path: path('M533.827,30.096 C499.731,21.033 423.412,5.47 393.778,6.554 227.747,12.622 -10.282,225.7 -14.499,191.944 ');
-	animation: move 5s infinite ease-in-out;
-	background-color: salmon;
-  top: 20%;
-  left: 20%; 
-}*/
-
-/* .b2 {
-  offset-path: path('M533.456,4.913 C503.314,12.739 401.925,18.723 364.175,42.653 324.156,68.017 224.476,155.141 177.164,167.888 143.116,177.061 1.284,199.029 -22.483,196.245 ');
-	animation: move 3s infinite ease-in-out;
-	background-color: green;
-  top: 5%;
-}
-
-
-.b3 {
-  offset-path: path('M-25.029,188.039 C8.077,209.576 186.359,134.381 266.728,103.906 333.268,78.656 496.644,27.179 536.714,26.109 ');
-	animation: move 2.5s reverse infinite ease-in-out;
-	background-color: blue;
-  top: 30%;
-  left: 40%;
-}
-
-.b4 {
-  offset-path: path('M533.456,4.913 C503.314,12.739 524.357,196.669 398.371,226.11 352.23,236.892 250.612,177.017 97.778,159.192 62.745,155.103 -19.511,193.66 -22.483,217.517 ');
-	animation: move 2.5s infinite ease-in-out;
-	background-color: teal;
-  top: 0%;
-}
-
-.b5 {
-  offset-path: path('M533.827,30.096 C499.731,21.033 423.412,5.47 393.778,6.554 227.747,12.622 -10.282,225.7 -14.499,191.944 ');
-	animation: move 5s infinite ease-in-out;
-	background-color: salmon;
-  bottom: 20%;
-  right: 20%;
-} */
-
-
 @keyframes move {
 	to {
     offset-distance: 100%;
-  }
-  
+  } 
 }
 
 
