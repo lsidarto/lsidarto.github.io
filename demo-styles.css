@@ -55,54 +55,25 @@ body {
 }
 
 
-/* .bird { */
-  /* width: 1.2rem;
+.bird {
+  width: 1.2rem;
   height: 1.2rem;
-  border-radius: 50%; */
-  /* position: absolute; */
-  /* z-index: -3; */
-  /* top: 0;
-  left: 0; */
-   /* offset-distance: 0; */
+  border-radius: 50%;
+  position: absolute;
+  z-index: -3;
+  top: 0;
+  left: 0;
+  offset-distance: 0;
 
-/* } */
+}
 
-
-/* .b1 {
+.b1 {
   offset-path: path("M 2367 -37 C 782 -30 1548 642 -123 416");
   animation: move 5s linear infinite;
   background-color: red;
-} */
-
-svg {
-    /* top: 0;
-    left: 0;
-    position: absolute; */
-  /*   overflow: visible; */
-  /*   height: 100%; */
-    z-index: -3;
-    position: absolute;
-    /* Fix Safari rendering bug */
-    transform: translateZ(0);
-  }
-  
-.path {
-  /* turn these on to see paths*/
-  stroke-width: 2;
-  stroke: gray; 
-  fill: none;
-  /* display: none; */
 }
 
-g.bird {
-  /* offset-path: path("M 2367 -37 C 782 -30 1548 642 -123 416");
-  animation: move 5s linear infinite;
-  background-color: red; */
-  fill: white;
-  z-index: 5;
-}
 
-/* 
 .b2 {
   offset-path: path("M 464 -55 C 372 130 320 291 -110 162");
   animation: move 2s linear infinite;
@@ -125,21 +96,13 @@ g.bird {
   offset-path: path("M 1202 -37 C 782 -30 429 29 -17 369");
   animation: move 3s linear infinite;
   background-color: green;
-} */
-
+}
 
 @keyframes move {
 	to {
     offset-distance: 100%;
-  }
+  } 
 }
-
-@-webkit-keyframes move {
-	to {
-    offset-distance: 100%;
-  }
-}
-
 
 
 section {
