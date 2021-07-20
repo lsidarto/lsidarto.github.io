@@ -70,9 +70,8 @@ svg {
 }
 
 .bird {
-  mix-blend-mode: multiply;
-
-  fill: rgb(199, 177, 204);
+  /* mix-blend-mode: multiply; */
+  fill: black;
 }
 
 section {
