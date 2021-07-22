@@ -15,7 +15,7 @@ body {
   padding: 0;
   font-family: 'Bodoni Moda', serif;
   font-weight: 350;
-  background: linear-gradient(#BA5B4C,#BA5B4C,#984437)
+  background: linear-gradient(#a8dafb,#a8dafb,#984437)
 }
 
 .houses {
@@ -35,50 +35,42 @@ body {
 
 .l4 {
   z-index: -5;
+  /* display:none; */
 }
 .l3 {
-  animation: house 2s alternate-reverse infinite; 
   z-index: -4;
 }
 .l2 {
-  animation: house 1s alternate-reverse infinite; 
   z-index: -2;
 }
 .l1 {
-  animation: house 3s alternate-reverse infinite; 
   z-index: -1;
 }
 
-@keyframes house {
-  100%{transform: scale(1.01);}
-}
-
+/* birds */
 svg {
     z-index: -3;
     position: absolute;
 
     /* Fix Safari rendering bug */
-    transform: translateZ(0);
-  }
+    transform: translateZ(0);}
   
 .path {
   /* turn these on to see paths*/
   /* stroke-width: 1;
   stroke: white;  */
-  fill: none;
-  /* display: none; */
-}
+  fill: none;}
 
 .bird {
-  /* mix-blend-mode: multiply; */
-  fill: black;
+  mix-blend-mode: multiply;
+  fill: #394463;
 }
 
-section {
+/* section {
   position: relative;
   width: 100%;
   height: 100%;
-}
+} */
 
 h2{
   font-family: 'Quicksand', sans-serif;
@@ -132,7 +124,7 @@ h2{
 
 .header {
   font-size: 10vw;
-  color: #92b2bf !important;
+  color: #c0ddea !important;
   font-weight: 900;
 }
 
@@ -178,9 +170,7 @@ h2{
   padding-top: 5%;
 }
 
-#bio {
-  font-weight: 100;
-  position:relative;
+.bio_text {
   padding-top: 10%;
   animation: float 2s ease-in-out infinite alternate; 
 }
@@ -230,6 +220,12 @@ h2{
 /* for mobile */
 @media (max-width: 480px) {
   .card_container_desktop {display: none;}
+  .card_container_mobile {
+    display: grid;
+    justify-content: center;
+    padding: 5px;
+    min-height: 500px;
+  }
   .card_img {
     border-radius: 20px;
     max-width: 100%;
@@ -238,17 +234,33 @@ h2{
   .card_figure {
     width: 45%;
   }
+  .intro {
+    position: absolute;
+    /* top: 45vh; */
+    right: 15vw;
+    text-align: center;
+    line-height: 0.9;
+    z-index: 1;
+    mix-blend-mode: color-dodge;
+    animation: float 2s ease-in-out infinite alternate; 
+  }
+  .header {
+    font-size: 20vw;
+  }
+  .intro p {
+    font-size: 5vw;
+  }
 }
 
 .card {
   width: 270px;
-  height: fit-content;
+  /* height: fit-content; */
   margin-top: 10px;
   margin: 5px;
   text-align: center;
-  transition: all .125s;
+  /* transition: all .125s; */
   background: #f0d3cf;
-  border: 3px solid #f3e1de;
+  /* border: 3px solid #f3e1de; */
   border-radius: 20px;
   transition: 0.3s;
   box-shadow: 0 5px 10px 0 rgba(0,0,0,.2);
@@ -404,3 +416,9 @@ footer a span {
   20% {transform: rotate(45deg) translate(-10px, -10px);}
   40% {transform: rotate(45deg) translate(0, 0);}
 }
+
+/* #vid{
+  opacity: 0.30;
+  position: absolute;
+  z-index:-5;
+} */
