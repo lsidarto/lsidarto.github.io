@@ -20,6 +20,7 @@
    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/MotionPathPlugin.min.js"></script>
+
  </head> 
  <body>
   <div id="nav"> 
@@ -46,7 +47,7 @@
       <img class = "layer l3" src = "resources/l3.png">
       <img class = "layer l4" src = "resources/l4.png">
 
-      <svg width="100%" height="100%" preserveAspectRatio="xMidYMin slice" viewBox="-20 0 630 300" id="svg">
+      <svg width="100%" height="100%" preserveAspectRatio="xMidYMin slice" viewBox="-20 0 630 300" id="bird_container">
         <path class="path path1" d="M 193.337 -3.192 C 176.299 45.301 135.968 114.195 -85.169 22.366"/>
         <path class="path path2" d="M 500.3655 -4.368 C 491 311 224 33 -11 360"/>
         <path class="path path3" d="M 696 -9 C 594 152 351 395 -45 298"/>
@@ -56,13 +57,17 @@
         <path class="bird b3" d="M 1.408 -0.48 C 0.8 1.088 0.736 2.496 1.408 3.872 C 1.92 4.896 0.8544 5.1769 0.0256 5.5782 C -2.112 4.608 -1.504 4.032 -1.344 3.744 C -0.64 2.336 -0.8 0.992 -1.376 -0.512 C -7.104 0.32 -6.7674 0.5235 -8.9603 1.112 C -6.112 -2.208 -5.1091 -2.4179 -1.1779 -2.2845 C -0.5094 -3.1133 -0.672 -4.864 -0.064 -5.504 C 0.064 -5.632 0.096 -5.568 0.192 -5.44 C 0.768 -4.512 0.544 -3.104 1.2826 -2.2576 C 4.9463 -2.4717 6.2566 -2.5251 9.3587 0.9517 C 5.1066 -0.9203 2.9405 -0.2253 1.408 -0.48"/>
       </svg>
     </div>
+
   </section>
 
+  <!-- big bird -->
+    <svg width="100%" height="1012px" viewBox="0 0 132 1012" id="longpathbox">
+      <path class="path path4" d="M -19 12 C -4 -49 1074 -2 1100 -1 C 1143 0 1742 -18 1823 -10 L 1957 6" ></path>
+      <path class="bird b4" d="M 14.08 -4.8 C 8 10.88 7.36 24.96 14.08 38.72 C 19.2 48.96 8.544 51.769 0.256 55.782 C -21.12 46.08 -15.04 40.32 -13.44 37.44 C -6.4 23.36 -8 9.92 -13.76 -5.12 C -71.04 3.2 -67.674 5.235 -89.603 11.12 C -61.12 -22.08 -51.091 -24.179 -11.779 -22.845 C -5.094 -31.133 -6.72 -48.64 -0.64 -55.04 C 0.64 -56.32 0.96 -55.68 1.92 -54.4 C 7.68 -45.12 5.44 -31.04 12.826 -22.576 C 49.463 -24.717 62.566 -25.251 93.587 9.517 C 51.066 -9.203 29.405 -2.253 14.08 -4.8"/>
+    </svg>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
 
-  <!-- <video autoplay muted loop id="vid">
-    <source src="resources/vid.mp4" type="video/mp4">
-  </video> -->
-  
+  <!-- rest of the stuff -->
   <section id="bio">
     <div class="bio_text">
       <div class="row">
@@ -95,12 +100,12 @@
           <div class="card_text">
               <p class="card_links"><a href="https://github.com/lsidarto/lsidarto.github.io">github</a></p>
               <h2 class="card_title">This Website</h2>
-              <h3 class="card_subtitle">Self-directed project and educational milestone</h3>
+              <h3 class="card_subtitle">Self-directed project, educational milestone</h3>
             </header>
             <div class="card_div"></div>
 
             <div class="card_body">
-              <p>A combination of design, 3D modelling, and some frontend skills!</p>
+              <p>Using frontend skills to breath life into design.</p>
             </div>
           </div>
       </article>
@@ -152,7 +157,7 @@
               <div class="card_text col">
                     <p class="card_links"><a href="https://github.com/lsidarto/lsidarto.github.io">github</a></p>
                     <h2 class="card_title">This Website</h2>
-                    <h3 class="card_subtitle">Educational milestone</h3>
+                    <h3 class="card_subtitle">Self-directed project, educational milestone</h3>
               </div>
           </div>
           <div class="row">
@@ -160,7 +165,7 @@
           </div>
           <div class="row">
               <div class="card_body">
-                  <p>A self-directed project, with a goal of delving into frontend development!</p>
+                  <p>Using frontend skills to breath life into design.</p>
           </div> 
       </article>
 
