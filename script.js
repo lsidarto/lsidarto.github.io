@@ -1,6 +1,28 @@
-// var vid = document.getElementById("vid");
-// vid.playbackRate = 0.6;
-// gsap.registerPlugin(, DrawSVGPlugin, MotionPathPlugin);
+
+window.onscroll = function() {nav_bg()};
+var header = document.getElementById("nav");
+var sticky = header.offsetTop; // Get the offset position of the navbar
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function nav_bg() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+  //add li to beginning of ul
+    // var elementTarget = document.getElementById("bio");
+    // if (window.scrollY > (elementTarget.offsetTop + elementTarget.offsetHeight)) {
+
+    //     // alert("You've scrolled past the second div");
+    //     var ul = document.getElementById("nav");
+    //     var li = document.createElement("li");
+    //     li.appendChild(document.createTextNode("Four"));
+    //     // ul.appendChild(li);
+
+    //     ul.insertBefore(li, ul.childNodes[0]);  // Insert <li> before the first child of <ul>
+    // }
+}
+
 gsap.registerPlugin(MotionPathPlugin);
 
 var w = window.innerWidth
@@ -100,3 +122,4 @@ gsap.to(".b4", {
 // });
 
 // positionElements();
+

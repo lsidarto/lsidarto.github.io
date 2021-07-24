@@ -63,20 +63,34 @@ svg {transform: translateZ(0); /* Fix Safari rendering bug */}
   left: 0;
   width: 100%;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 2;
 }
 #nav li {
   float: left; 
   list-style: none;
-  margin: 10px 20px;
-  letter-spacing: 0.1em;
+  margin: 10px 10px;
 }
 #nav > li > a {
   font-family: 'Quicksand', sans-serif;
   opacity: 0.6;
   text-decoration: none;
   transition: 0.3s;
+  letter-spacing: 0.1em;
 }
-#nav > li > a:hover {opacity: 1}
+#nav > li > a:hover {opacity: 1;}
+
+.sticky {
+  background-color: rgba(74,96,100,1);
+  transition: 0.5s;
+}
+
+@keyframes moveAnim {
+ from { flex: none }
+ to{ flex: 1 }
+}
 
 .intro {
   position: absolute;
@@ -213,6 +227,16 @@ h2{
   }
   .header {font-size: 20vw;}
   .intro p {font-size: 5vw;}
+  /* #nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  } */
 }
 
 .card {
