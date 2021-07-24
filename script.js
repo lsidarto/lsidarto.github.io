@@ -28,7 +28,7 @@ motionPath:{
     path: ".path2",
     align: ".path2",
     autoRotate: 90,
-    alignOrigin: [0.5, 0.5]
+    alignOrigin: [0.5, 0.5],
 }
 });
 gsap.to(".b3", {
@@ -50,9 +50,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 gsap.to(".b4", {
     x: w,
-    duration: 4,
+    duration: 6,
     // autoAlpha:0,
-    scale: 0.8,
     scrollTrigger: {
         trigger:".b4",
         start: "center 90%",

@@ -1,14 +1,10 @@
-
 * {
   margin: 0;
   padding: 0;
   color: white;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
+html {scroll-behavior: smooth;}
 html, body { max-width: 100%; overflow-x: hidden; } 
 
 body {
@@ -17,7 +13,6 @@ body {
   font-weight: 350;
   background: linear-gradient(to top,#4a6064, #283436,#283436)
 }
-
 
 .houses {
   position: relative;
@@ -34,71 +29,32 @@ body {
   object-fit:cover;
 }
 
-.l4 {
-  z-index: -5;
-  /* display:none; */
-}
-.l3 {
-  z-index: -4;
-}
-.l2 {
-  z-index: -2;
-}
-.l1 {
-  z-index: -1;
-}
+svg {transform: translateZ(0); /* Fix Safari rendering bug */}
 
+.l4 {z-index: -5;}
+.l3 {z-index: -4;}
+.l2 {z-index: -2;}
+.l1 {z-index: -1;}
 
 #longpathbox {
 	position: absolute;
-	/* display: block;
-	left: 50%;
-	top: 50vh; */
 	margin-bottom: 50vh;
 	overflow: visible;
 	transform: translateX(-50%);
 }
 
 .path4 {
-  position: absolute;
-  left:0;
 	fill: #283436 !important;
   overflow: hidden;
-	/* stroke: #fff;
-	stroke-width: 2px; */
 }
 
-.b4 {
-	position: absolute;
-	fill: rgb(253, 253, 253) !important;
-  mix-blend-mode: normal !important;
-  z-index: 6;
-  transform: rotate(90deg);
-}
-
-/* birds */
-svg {transform: translateZ(0); /* Fix Safari rendering bug */}
-
-#bird_container {
+#bird_container { /*3 birds*/
     z-index: -3;
     position: absolute;} 
-  
-.path {
-  /* turn these on to see paths*/
-  /* stroke-width: 1;
-  stroke: white;  */
-  fill: none;}
 
-.bird {
-  mix-blend-mode: multiply;
-  fill: #394463;
-}
-
-h2{
-  font-family: 'Quicksand', sans-serif;
-  letter-spacing: 0.05em;
-}
-
+.path {fill: none;} 
+.bird {fill: #394463;}
+.b4 {fill: rgb(253, 253, 253) !important;}
 
 /* navbar */
 #nav {
@@ -108,21 +64,18 @@ h2{
   width: 100%;
   z-index: 1;
 }
-
 #nav li {
   float: left; 
   list-style: none;
   margin: 10px 20px;
   letter-spacing: 0.1em;
 }
-
 #nav > li > a {
   font-family: 'Quicksand', sans-serif;
   opacity: 0.6;
   text-decoration: none;
   transition: 0.3s;
 }
-
 #nav > li > a:hover {opacity: 1}
 
 .intro {
@@ -138,19 +91,17 @@ h2{
 @keyframes float {
   to{ transform: translateY(-2%);}
 }
-
 .intro p {
   font-family: 'Quicksand', sans-serif;
   font-size: 2vw;
 }
-
 .header {
   font-size: 10vw;
   color: #c0ddea !important;
   font-weight: 900;
 }
 
-/* scroll text and arrow pos */
+/* scroll down text*/
 .landing a{
   font-family: 'Quicksand', sans-serif;
   position: absolute;
@@ -164,13 +115,11 @@ h2{
   text-decoration: none;
   transition: opacity .3s;
 }
-
 .landing a:hover {
   opacity: 0.9;
 }
 
-/*for the arrow */
-#title a span {
+#title a span {/*arrow down*/
   position: absolute;
   bottom: -18px;
   left: 50%;
@@ -188,18 +137,17 @@ h2{
   40% {transform: rotate(-45deg) translate(0, 0);}
 }
 
-.bodytext {
-  padding-top: 5%;
+h2{
+  font-family: 'Quicksand', sans-serif;
+  letter-spacing: 0.05em;
 }
 
-.bio_text {
-  padding-top: 10%;
-  animation: float 2s ease-in-out infinite alternate; 
-}
+.bodytext {padding-top: 5%;}
 
-#biotext p {
-  padding-right: 10px;
-}
+.bio_text {padding-top: 10%;
+  animation: float 2s ease-in-out infinite alternate; }
+
+#biotext p {max-width: 50ch;}
 
 #pfp {
   display: block;
@@ -227,26 +175,23 @@ h2{
 }
 
 /* article cards: desktop */
-
-.card_container_mobile{
-  display: none;
-}
-
+.card_container_mobile{display: none;}
 .card_container_desktop {
   display: flex;
   justify-content: center;
   padding: 5px;
   min-height: 500px;
+  margin-top: 2%;
 }
 
-/* for mobile */
-@media (max-width: 480px) {
+@media (max-width: 480px) { /* for mobile */
   .card_container_desktop {display: none;}
   .card_container_mobile {
     display: grid;
     justify-content: center;
     padding: 5px;
     min-height: 500px;
+    margin-top: 2%;
   }
   .card_img {
     border-radius: 20px;
@@ -266,12 +211,8 @@ h2{
     mix-blend-mode: color-dodge;
     animation: float 2s ease-in-out infinite alternate; 
   }
-  .header {
-    font-size: 20vw;
-  }
-  .intro p {
-    font-size: 5vw;
-  }
+  .header {font-size: 20vw;}
+  .intro p {font-size: 5vw;}
 }
 
 .card {
@@ -280,10 +221,10 @@ h2{
   margin: 5px;
   text-align: center;
   background: #f0d3cf;
-  /* border: 3px solid #f3e1de; */
   border-radius: 20px;
   transition: 0.3s;
   box-shadow: 0 5px 10px 0 rgba(0,0,0,.2);
+  overflow: hidden;
 }
 
 .card_img {
@@ -322,42 +263,24 @@ h2{
 .card_links{
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 2%;
-}
-
-.card_links a {
   margin: 2%;
 }
+
 .card a {
   font-family: 'Solway', serif;
-  
   color: rgb(73, 73, 73);
   text-decoration: none;
   font-weight: 300;
- }
-
-.card a:hover{
-  color: #BA5B4C ;
-  transition: 0.5s;
 }
 
-.card_div {
-  overflow: hidden;
-}
-
-.card_div::before {
-  overflow: hidden;
+.card_div::before { /* dotted line dividers*/
   margin-left: -12px;
   content: "";
   display: block;
   border-bottom: 2px dashed #FFF;
   animation: slide alternate 2s infinite;
 }
-
-@keyframes slide {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(12px);} 
-}
+@keyframes slide {to { transform: translateX(12px);} }
 
 .card_body p {
   font-family: 'Roboto Slab', serif;
@@ -371,7 +294,6 @@ h2{
 
 .subheading {
   margin-left: 15%;
-  margin-bottom: 2%;
   display: flex;
 }
 
@@ -382,6 +304,7 @@ h2{
   0%   { transform: translateX(0px); }
   100% { transform: translateX(2px); }
 }
+
 footer {
   display: flex;
   flex-direction: column;
@@ -400,10 +323,7 @@ footer {
   text-decoration: none;
   transition: opacity .3s;
 }
-
-#scrollup:hover {
-  opacity: 0.9;
-}
+#scrollup:hover {opacity: 0.9;}
 
 footer a span {
   position: absolute;
@@ -421,9 +341,3 @@ footer a span {
   20% {transform: rotate(45deg) translate(-10px, -10px);}
   40% {transform: rotate(45deg) translate(0, 0);}
 }
-
-/* #vid{
-  opacity: 0.30;
-  position: absolute;
-  z-index:-5;
-} */
