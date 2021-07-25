@@ -11,7 +11,11 @@ body {
   padding: 0;
   font-family: 'Bodoni Moda', serif;
   font-weight: 350;
-  background: linear-gradient(to top,#4a6064, #283436,#283436)
+}
+
+.content {
+  background: linear-gradient(to top,#4a6064, #283436,#283436);
+  min-height: 100vw;
 }
 
 .houses {
@@ -38,12 +42,11 @@ svg {transform: translateZ(0); /* Fix Safari rendering bug */}
 
 #longpathbox {
 	position: absolute;
-	margin-bottom: 50vh;
 	overflow: visible;
 	transform: translateX(-50%);
 }
 
-.path4 {
+.path0 {
 	fill: #283436 !important;
   overflow: hidden;
 }
@@ -54,7 +57,7 @@ svg {transform: translateZ(0); /* Fix Safari rendering bug */}
 
 .path {fill: none;} 
 .bird {fill: #394463;}
-.b4 {fill: rgb(253, 253, 253) !important;}
+.b0 {fill: rgb(253, 253, 253) !important;}
 
 /* navbar */
 #nav {
@@ -65,9 +68,10 @@ svg {transform: translateZ(0); /* Fix Safari rendering bug */}
   z-index: 1;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
   z-index: 2;
 }
+
 #nav li {
   float: left; 
   list-style: none;
@@ -115,6 +119,9 @@ svg {transform: translateZ(0); /* Fix Safari rendering bug */}
   font-weight: 900;
 }
 
+.col {flex: 1; }
+.row {display: flex;}
+
 /* scroll down text*/
 .landing a{
   font-family: 'Quicksand', sans-serif;
@@ -156,6 +163,10 @@ h2{
   letter-spacing: 0.05em;
 }
 
+h3{
+  font-family: 'Bodoni Moda', serif;
+}
+
 .bodytext {padding-top: 5%;}
 
 .bio_text {padding-top: 10%;
@@ -172,52 +183,25 @@ h2{
   border: 3px solid #FFF;
 }
 
-.col {
-  float: left;
-  width: 50%;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 .section_header > h2 {
   margin-top:5%;
   margin-left: 10%;
 }
 
-/* article cards: desktop */
-.card_container_mobile{display: none;}
-.card_container_desktop {
+.card_container {
   display: flex;
   justify-content: center;
   padding: 5px;
-  min-height: 500px;
   margin-top: 2%;
 }
 
 @media (max-width: 480px) { /* for mobile */
-  .card_container_desktop {display: none;}
-  .card_container_mobile {
-    display: grid;
-    justify-content: center;
-    padding: 5px;
-    min-height: 500px;
-    margin-top: 2%;
-  }
-  .card_img {
-    border-radius: 20px;
-    max-width: 100%;
-    object-fit: cover;
-    height: auto;}
-  .card_figure {
-    width: 45%;
+  .card_container{
+    flex-direction: column;
+    align-items: center;
   }
   .intro {
     position: absolute;
-    /* top: 45vh; */
     right: 15vw;
     text-align: center;
     line-height: 0.9;
@@ -227,16 +211,6 @@ h2{
   }
   .header {font-size: 20vw;}
   .intro p {font-size: 5vw;}
-  /* #nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-  } */
 }
 
 .card {
@@ -254,7 +228,7 @@ h2{
 .card_img {
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
-  max-width: 100%;
+  width: 100%;
   object-fit: cover;
 }
 
@@ -271,15 +245,14 @@ h2{
   font-size: 130%;
   line-height: 1.1;
   text-align: left;
+  /* width: 70vw; */
 }
 
 .card_subtitle {
-  font-family: "Bodoni Moda", serif;
-  font-weight: 700;
   color: #BA5B4C;
   line-height: 1.2;
   margin-top: 2px;
-  margin-bottom: 5%;
+  margin-bottom: 5px;
   text-align: left;
   font-size: inherit
 }
@@ -287,10 +260,12 @@ h2{
 .card_links{
   display: flex;
   justify-content: flex-end;
-  margin: 2%;
+  margin: 2px;
 }
 
-.card a {
+.card_text a:hover{color: #BA5B4C;}
+
+.card_text a {
   font-family: 'Solway', serif;
   color: rgb(73, 73, 73);
   text-decoration: none;
@@ -306,9 +281,9 @@ h2{
 }
 @keyframes slide {to { transform: translateX(12px);} }
 
-.card_body p {
+.card_body {
   font-family: 'Roboto Slab', serif;
-  padding: 5%;
+  padding: 10px 5px;
   color: rgb(90, 90, 90);
   font-size: 16px;
   line-height: 1;
@@ -364,4 +339,13 @@ footer a span {
   0% {transform: rotate(45deg) translate(0, 0);}
   20% {transform: rotate(45deg) translate(-10px, -10px);}
   40% {transform: rotate(45deg) translate(0, 0);}
+}
+
+
+/* for all other pages */
+.page_head_spacer{
+  min-height: 10%;
+  height: auto;
+  padding-top: 10%;
+  text-align:center;
 }

@@ -1,0 +1,97 @@
+.vertical {
+  border-left: 2px solid #FFF;
+  min-height: 100vh;
+  height:100%;
+  position: fixed;
+  left: 5%;
+}
+
+ul li:hover::before{ 
+  content: "☞";
+  transition: 0.3s;
+}
+
+ul {width: auto;
+margin-left: 5px;}
+ul a{text-decoration: none;}
+ul.vnav {list-style-type: none;}
+
+div.col{
+  flex: 1;
+  margin: 10px;
+  min-height: 100vh;
+}
+div.col:nth-of-type(even){ /*col with the content*/
+  flex: 5;
+  padding: 0 3%;
+}
+
+
+/* remove these 2 */
+/* div.col:nth-of-type(odd){
+  background: #85929E;
+  color: white;
+}
+div.col:nth-of-type(even){
+  background: #456069;
+  color: green;
+} */
+
+fieldset {
+  border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+legend {
+  margin: 0 10%;
+  padding: 10px;
+}
+
+.odd {margin-left:auto;}
+.section {padding-top: 5%;}
+
+@media (max-width: 480px) {
+  div.col:nth-of-type(1){ display:none} /*delete vnav*/
+  .card_title {font-size: 100%;}
+}
+
+
+.card_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 2%;
+  margin-bottom: 2%;
+}
+
+.card {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+  background-color: #f0d3cf;
+}
+
+.card_title {
+  position: absolute;
+  margin-left: 2%;
+}
+
+.card_img {opacity: 0.2;}
+
+.card.active {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  margin: 0;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.card_text {
+  display: none;
+  overflow: hidden;
+  background: #f0d3cf;
+  width: -webkit-fill-available;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
