@@ -68,7 +68,6 @@ legend {
 
 .card.active {
   box-shadow:none;
-  /* transition: 1s; */
 }
 
 .card {
@@ -81,10 +80,25 @@ legend {
   background-color: #f0dedc;
 }
 
-.card_title {
-  position: absolute;
-  margin-left: 2%;
+.research_card {
+  /* z-index:1;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content:flex-start; */
+  border-radius: 20px;
+  align-items: center;
+  background-color: #f0dedc;
 }
+
+.card .card_title {position: absolute;} /* only for projects*/
+
+.card_title {  
+  width: 95%;
+  padding: 1% 2%;
+}
+
+.card_subtitle {margin-top: 0;}
 
 .card_img {opacity: 0.2;;}
 
@@ -106,8 +120,9 @@ legend {
   text-align: left;
 }
 
-
-* {
-  transition: all 2s;
+.research_card .card_body {
+  padding: 0 2% 2% 2%;
 
 }
+
+

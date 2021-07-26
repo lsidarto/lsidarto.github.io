@@ -29,21 +29,25 @@
       <!-- these should go to different pages everntually -->
       <li><a href = "../index.html">lsidarto</a></li>
       <li>portfolio</li> 
-      <li><a href="pages/resume.html">resume</a></li>
-      <li><a href="pages/contact.html">contact</a></li>
+      <li><a href="../pages/resume.html">resume {⤓}</a></li>
+      <li><a href="../pages/contact.html">contact</a></li>
   </div>
 
   <div class="content">
-    <section class="pagetop">
+    <section id="pagetop">
     <div class="page_head_spacer"></div>
     </section>
     <div class="row">
       <div class="col">
         <div class= "vertical">
           <ul class = "vnav">
+          <li><a href="#pagetop"> { ⬆	}</a></li>
+
           <li><a href="#section1"> projects</a></li>
           <li><a href="#section2"> research</a></li>
           <li><a href="#section3"> other</a></li>
+          <li><a href="#pagebottom"> { ⬇ }</a></li>
+
           </ul>
         </div>
       </div>
@@ -90,7 +94,14 @@
         <section class="section section2" id="section2">
           <fieldset>
             <legend class="odd"><h3>RESEARCH</h3></legend>
-            <p>sdfdsf</p>
+            <div class="card_container">
+              <div class="research_card"><h2 class="card_title">Qualcomm Institute - UC San Diego Division of Calit2 Internship</h2>
+                <h3 class="card_subtitle">Undergraduate Student Researcher • Dec 2020 – May 2021</h4>
+      
+                <p class="card_body">Leveraging machine learning practices to help quantify the efficacy of the City of San Diego's Climate Action Plan by mapping the development of San Diego's urban tree canopy.</p>
+              </div>
+            </div>
+
           </fieldset>
         </section>
     
@@ -104,9 +115,9 @@
       </div>
     </div>
   
-    <footer>
+    <footer id="pagebottom">
       <br><br>
-      <a href="#sectiontop" id='scrollup'>[back to top]<span></span></a>
+      <a href="#pagetop" id='scrollup'>[back to top]<span></span></a>
       <span>made by me :) code on github</span><br>
     </footer>
   </div>
