@@ -19,7 +19,6 @@
   --navbarColour: rgb(213, 231, 235);
   --birdColour: black;
   --pathColour: #dce8eb;
-
 }
 
 * {
@@ -27,6 +26,8 @@
   padding: 0;
   color: var(--fontColour);
 }
+
+.symbol {font-family: 'SymbolaRegular';}
 
 /* box around the slider */
 .switch {
