@@ -1,5 +1,10 @@
+.content {
+  background: var(--backgroundColour);
+}
+
 .vertical {
-  border-left: 2px solid #FFF;
+  border-left: 2px solid var(--fontColour);
+  ;
   min-height: 100vh;
   height:100%;
   position: fixed;
@@ -53,7 +58,6 @@ legend {
 
 @media (max-width: 480px) {
   div.col:nth-of-type(1){ display:none} /*delete vnav*/
-  /* .card_title {font-size: 100%;} */
 }
 
 .card_container {
@@ -67,18 +71,19 @@ legend {
   margin: 1%;
 }
 
-.closable_card {background-color: #e2d9d8;}
 
-.card_title {padding: 2%;}
+.closable_card {background-color: var(--overlay);}
+.card_text {display: block;}  /*show content by default*/
 
-.card_img {opacity: 0.2;;}
-
-.card_text { /*show content by default*/
-  display: block;
+.card_title {
+  padding: 2%;
+  color: inherit;
 }
+/* .card_img {opacity: 0.2;} */
 
 .card_body {
   text-align: left;
+  color: inherit !important;
 }
 
 .inverted_card{

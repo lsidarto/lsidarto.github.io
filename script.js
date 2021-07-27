@@ -1,4 +1,3 @@
-
 window.onscroll = function() {nav_bg()};
 var header = document.getElementById("nav");
 var sticky = header.offsetTop; // Get the offset position of the navbar
@@ -23,8 +22,14 @@ function nav_bg() {
     // }
 }
 
+// theme switch
+const themeSwitch = document.querySelector('input');
+themeSwitch.addEventListener('change', () => {  
+    document.body.classList.toggle('light_theme');
+});
 
-if ($("body#portfolio").length > 0) {
+//only for portfolio page
+if ($("body#portfolio").length > 0) { 
     var coll = document.getElementsByClassName("closable_card");
 
     for (var i = 0; i < coll.length; i++) {
