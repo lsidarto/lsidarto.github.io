@@ -25,15 +25,13 @@ function nav_bg() {
 
 
 if ($("body#portfolio").length > 0) {
+    var coll = document.getElementsByClassName("closable_card");
 
-    var coll = document.getElementsByClassName("card");
-    var i;
-
-    for (i = 0; i < coll.length; i++) {
+    for (var i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
+        // this.classList.toggle("active");
         
-        var content = this.nextElementSibling;
+        var content = this.children[1];
         if (content.style.display === "none") {
         content.style.display = "block";
         } else {
