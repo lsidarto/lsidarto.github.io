@@ -5,146 +5,64 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../styles/demo-styles.css">
+    <link rel="stylesheet" href="../styles/contact.css">
 
-    <link rel="stylesheet" href="demo-styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
 
+    <!-- fonts -->
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Solway:wght@500&display=swap');
-
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap');
     </style>
-   
+    <!-- gsap -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/MotionPathPlugin.min.js"></script> -->
+
  </head> 
- <body>
+ <body id="portfolio">
   <div id="nav"> 
       <!-- these should go to different pages everntually -->
-      <li><a href="#portfolio">portfolio</a></li> 
-      <li><a href="#resume">resume</a></li>
-      <li><a href="#contact">contact</a></li>
-  </div>
-    
-  <section id="title" class = "landing">
-    <div class = "intro">
-      <p>hi, i'm</p>
-      <div class="header">lauren<br>sidarto</div>
-      <br><p>aspiring data scientist</p>
-    </div>
-    
-    <a href="#bio">[scroll]<span></span></a>
-    
-    <model-viewer src="https://cdn.glitch.com/1b30324c-5e4f-4043-83fc-f3d93d6763e2%2Fflower_copy.glb" environment-image="https://cdn.glitch.com/1b30324c-5e4f-4043-83fc-f3d93d6763e2%2Fsatara_night_1k.hdr" shadow-intensity="1" camera-orbit="-67.35deg 75deg 23.48m" poster="poster.png" min-camera-orbit="auto auto auto" max-camera-orbit="auto auto 23.48m" min-field-of-view="42.78deg" max-field-of-view="auto" auto-rotate>
-        <div class="progress-bar hide" slot="progress-bar">
-            <div class="update-bar"></div>
+      <li><a href = "../index.html">lsidarto</a></li>
+      <li><a href = "../pages/portfolio.html">portfolio</a></li> 
+      <li><a href="../pages/resume.html">resume {⤓}</a></li>
+      <li>contact</li>
+      <li><label class="switch">
+        <div>
+          <input type="checkbox" />
+          <span class="slider"></span>
         </div>
-    </model-viewer>
-  </section>
-  
-  <section id="bio">
+      </label></li>
+  </div>
+
+  <div class="content">
+    <section id="pagetop">
+    <div class="page_head_spacer"></div>
+    </section>
     <div class="row">
       <div class="col">
-        <img src = "resources/pfp.png" id = "pfp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .02c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.99 6.98l-6.99 5.666-6.991-5.666h13.981zm.01 10h-14v-8.505l7 5.673 7-5.672v8.504z"/></svg>
+        <br><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        <br><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
       </div>
-      <div class='col'><p>
-        <b><h2>Hi! I'm Lauren Sidarto.</h2></b><br>
-        I'm studying sadfjasfkhkfsad bio bio bio bio bio bio<br>
-        bio bio bio bio bio bio<br>
-        bio bio bio bio bio biobio bio bio bio bio bio<br>
-      </p></div>
+      <div class="col">
+        <p>lsidarto [at] ucsd [dot] edu</p>
+        <p>github</p>
+        <p>linkedin</p>
+      </div>
     </div>
-
-  </section>
   
-  <section id="portfolio" class = "bodytext">
-    <div class="section_header">
-      <div class="card_div"></div>
-      <h2>RECENT WORK:</h2>
-    </div>
-    <div class="card_container">
-      <article class="card">
-          <figure class="card_figure">
-            <img src="resources/default_thumbnail.png" class="card_img" alt="waves" width="275" height="240">
-          </figure>
-      
-          <div class="card_text">
-              <h2 class="card_title">Project Title</h2>
-              <h3 class="card_subtitle">subtitle asjdfhsdhkfh</h3>
-            </header>
-            <div class="card_div"></div>
-
-            <div class="card_body">
-              <p>See the beautiful oceans of the Pacific coast where the water is so clean you can see the sand.</p>
-            </div>
-          </div>
-      </article>
-      <article class="card">
-        <figure class="card_figure">
-          <img src="resources/default_thumbnail.png" class="card_img" alt="waves" width="275" height="240">
-        </figure>
-    
-        <div class="card_text">
-            <h2 class="card_title">Project Title sdf sdfswf</h2>
-            <h3 class="card_subtitle">asjdfhsdhkfh</h3>
-
-          </header>
-          <div class="card_div"></div>
-
-          <div class="card_body">
-            <p>See the beautiful oceans of the Pacific coast where the water is so clean you can see the sand.</p>
-          </div>
-        </div>
-      </article>
-      <article class="card">
-        <figure class="card_figure">
-          <img src="resources/default_thumbnail.png" class="card_img" alt="waves" width="275" height="240">
-        </figure>
-    
-        <div class="card_text">
-            <h2 class="card_title">a very very very very very very long project title</h2>
-            <h3 class="card_subtitle">walaoeh</h3>
-
-          </header>
-          <div class="card_div"></div>
-
-          <div class="card_body">
-            <p>See the beautiful oceans of the Pacific coast where the water is so clean you can see the sand.
-              <br>sdfajdkfsk!!<br>fsdfs!!
-            </p>
-          </div>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section id="resume" class = "bodytext">
-    <div class="section_header"><div class="card_div"></div><h2>[remove this section]</h2></div>
-  </section>
-  <section id="contact" class = "bodytext">
-    <div class="section_header"><div class="card_div"></div><h2>LET'S TALK:</h2></div>
-    <p>
-      hello! lsadfk<br>jdh<br>fa<br>sj<br>dh<br>fk<br>j<br>s<br>d<br>a<br>h<br>f<br>k<br>j<br>s<br>d<br>hfjkhd<br>s<br>f<br>kj<br>hs<br>dkjfhdsfjkhsdkjf<br>hsk<br>j<br>a<br>d<br>f<br>h<br>ksjhdf<br><br>
-    </p>
-  </section>
-  <footer>
-    <span>made by me :) code on github</span>
-  </footer>
-
-
-  <!-- 💁 Include both scripts below to support all browsers! -->
-
-  <!-- Loads <model-viewer> for modern browsers: -->
-  <script type="module"
-      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
-  </script>
-
-  <!-- Loads <model-viewer> for old browsers like IE11: -->
-  <script nomodule
-      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
-  </script>
-  
-  <script src = "script.js"></script>
-</body>
+    <footer id="pagebottom">
+      <br><br>
+      <a href="#pagetop" id='scrollup'>[back to top]<span></span></a>
+      <p>made by me :) code on github</a></p><br>
+    </footer>
+  </div>
+ 
+  <!-- scripts  -->
+  <script src = "../script.js"></script>
+  </body>
 </html>

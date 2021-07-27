@@ -13,7 +13,6 @@
   --fontColour: black;
   --subtitleColour: #BA5B4C;
   --cardLinkColour: rgb(23, 168, 173);
-
   --backgroundColour: linear-gradient(to top,#aec4c9,#dce8eb,#dce8eb);
   --overlay: rgba(255, 255, 255, 0.5);
   --navbarColour: rgb(213, 231, 235);
@@ -65,6 +64,11 @@
   border-radius: 50%;
 }
 
+.content {
+  background: var(--backgroundColour);
+}
+
+
 input:checked + .slider {background-color: #283436;}
 
 input:checked + .slider:before {
@@ -77,11 +81,7 @@ input:checked + .slider:before {
 html {scroll-behavior: smooth;}
 html, body { max-width: 100%; overflow-x: hidden;} 
 
-body {
-  padding: 0;
-  font-family: 'Bodoni Moda', serif;
-  font-weight: 350;
-}
+body {font-family: 'Bodoni Moda', serif;}
 
 .content {
   background: var(--backgroundColour);
@@ -140,7 +140,6 @@ svg {transform: translateZ(0); /* Fix Safari rendering bug */}
   align-items: center;
   justify-content: flex-start;
   z-index: 2;
-  flex-wrap:wrap;
 }
 
 #nav li {
@@ -281,6 +280,14 @@ h3{font-family: 'Bodoni Moda', serif;}
   }
   .header {font-size: 20vw;}
   .intro p {font-size: 5vw;}
+  .switch {
+    position: fixed;
+    bottom: 3%;
+    left: 3%;
+    display: block;
+    width: 40px;
+    height: 20px;
+  }
 }
 
 .card {
@@ -375,10 +382,7 @@ h3{font-family: 'Bodoni Moda', serif;}
 footer {
   display: flex;
   flex-direction: column;
-  max-width: 600px;
-  margin: auto;
   text-align: center;
-  line-height: 1.5em;
 }
 
 #scrollup {
@@ -408,7 +412,6 @@ footer a span {
   20% {transform: rotate(45deg) translate(-10px, -10px);}
   40% {transform: rotate(45deg) translate(0, 0);}
 }
-
 
 /* for all other pages */
 .page_head_spacer{

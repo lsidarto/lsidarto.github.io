@@ -1,0 +1,15 @@
+div.col{
+  flex: 1;
+  /* margin: 10px; */
+  min-height: 100vh;
+  text-align:right;
+}
+div.col:nth-of-type(even){ /*col with the content*/
+  flex: 5;
+  /* padding: 0 3%; */
+  text-align: left;
+}
+
+svg{
+  fill:white;
+}
