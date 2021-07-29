@@ -7,10 +7,14 @@
   --navbarColour: rgba(74,96,100,1);
   --birdColour: white;
   --pathColour: #283436;
+  --headerFont: 'Spectral', serif;
+  --bodyFont: 'Karla', sans-serif;
+  --accentFont: 'Bodoni Moda', serif;
+  --symbolFont: 'SymbolaRegular';
 }
 
 .light_theme {
-  --fontColour: black;
+  --fontColour: rgb(35, 54, 58);
   --subtitleColour: #BA5B4C;
   --cardLinkColour: rgb(23, 168, 173);
   --backgroundColour: linear-gradient(to top,#aec4c9,#dce8eb,#dce8eb);
@@ -26,7 +30,7 @@
   color: var(--fontColour);
 }
 
-.symbol {font-family: 'SymbolaRegular';}
+.symbol {font-family: var(--symbolFont);}
 
 /* box around the slider */
 .switch {
@@ -81,7 +85,7 @@ input:checked + .slider:before {
 html {scroll-behavior: smooth;}
 html, body { max-width: 100%; overflow-x: hidden;} 
 
-body {font-family: 'Bodoni Moda', serif;}
+body {font-family: var(--bodyFont);}
 
 .content {
   background: var(--backgroundColour);
@@ -135,7 +139,6 @@ svg {transform: translateZ(0); /* Fix Safari rendering bug */}
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -143,17 +146,16 @@ svg {transform: translateZ(0); /* Fix Safari rendering bug */}
 }
 
 #nav li {
-  float: left; 
   list-style: none;
   margin: 10px 10px;
   text-align: center;
-}
-#nav > li > a {
-  font-family: 'Quicksand', sans-serif;
-  opacity: 0.6;
-  text-decoration: none;
-  transition: 0.3s;
   letter-spacing: 0.1em;
+}
+
+#nav > li > a {
+  opacity: 0.6;
+  transition: 0.3s;
+  text-decoration: none;
 }
 #nav > li > a:hover {opacity: 1;}
 
@@ -181,11 +183,12 @@ svg {transform: translateZ(0); /* Fix Safari rendering bug */}
   to{ transform: translateY(-2%);}
 }
 .intro p {
-  font-family: 'Quicksand', sans-serif;
+  font-family: var(--bodyFont);
   font-size: 2vw;
   color:white;
 }
 .header {
+  font-family: var(--accentFont);
   font-size: 10vw;
   color: #c0ddea !important;
   font-weight: 900;
@@ -194,22 +197,25 @@ svg {transform: translateZ(0); /* Fix Safari rendering bug */}
 .col {flex: 1; }
 .row {display: flex;}
 
-/*"scroll down"*/
-.landing a{
-  font-family: 'Quicksand', sans-serif;
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.scroll {
   opacity: 0.8;
   z-index: 1;
   font-size: 12px;
   letter-spacing: .05em;
   text-decoration: none;
+  font-family: var(--headerFont);
+  margin-bottom: 5px;
+}
+
+/*"scroll down"*/
+.landing a{
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   transition: opacity .3s;
   color:white;
 }
-
 .landing a:hover {opacity: 0.9;}
 
 #title a span {/*arrow down*/
@@ -231,11 +237,11 @@ svg {transform: translateZ(0); /* Fix Safari rendering bug */}
 }
 
 h2{
-  font-family: 'Quicksand', sans-serif;
+  font-family: var(--headerFont);
   letter-spacing: 0.05em;
 }
 
-h3{font-family: 'Bodoni Moda', serif;}
+h3{font-weight:600;}
 
 .bodytext {padding-top: 5%;}
 
@@ -317,7 +323,7 @@ h3{font-family: 'Bodoni Moda', serif;}
 }
 
 .card_title {
-  font-family: "Quicksand", sans-serif;
+  font-family: var(--headerFont);
   color: var(--fontColour);
   line-height: 1.1;
   text-align: left;
@@ -325,7 +331,7 @@ h3{font-family: 'Bodoni Moda', serif;}
 
 .card_subtitle {
   color: var(--subtitleColour);
-  line-height: 1.2;
+  /* line-height: 1.2; */
   /* margin-top: 1%;
   margin-bottom: 5px;
   margin-left: 2%; */
@@ -342,7 +348,7 @@ h3{font-family: 'Bodoni Moda', serif;}
 .card_text a:hover{color: #BA5B4C;}
 
 .card_text a {
-  font-family: 'Solway', serif;
+  /* font-family: 'Solway', serif; */
   color: var(--cardLinkColour);
   font-weight: 300;
 }
@@ -357,7 +363,7 @@ h3{font-family: 'Bodoni Moda', serif;}
 @keyframes slide {to { transform: translateX(12px);} }
 
 .card_body {
-  font-family: 'Roboto Slab', serif;
+  font-family: var(--bodyFont);
   padding: 1% 2%;
   color: rgb(90, 90, 90);
   font-size: 16px;
@@ -386,12 +392,6 @@ footer {
 }
 
 #scrollup {
-  font-family: 'Quicksand', sans-serif;
-  opacity: 0.6;
-  z-index: 1;
-  font-size: 12px;
-  letter-spacing: .05em;
-  text-decoration: none;
   transition: opacity .3s;
 }
 #scrollup:hover {opacity: 0.9;}
@@ -400,7 +400,7 @@ footer a span {
   position: absolute;
   width: 18px;
   height: 18px;
-  margin-left: -55px;
+  margin-left: 25px;
   margin-top:-15px;
   border-left: 2px solid var(--fontColour);
   border-top: 2px solid var(--fontColour);

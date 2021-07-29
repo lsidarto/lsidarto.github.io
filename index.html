@@ -11,10 +11,7 @@
 
     <!-- fonts -->
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Solway:wght@500&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Karla:wght@300;600&family=Spectral&display=swap');
     </style>
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/symbola" type="text/css"/>
 
@@ -25,13 +22,11 @@
  </head> 
  <body id="index">
     <div id="nav"> 
-        <!-- these should go to different pages everntually -->
-        <li>lsidarto</li>
+        <li><a href = "../index.html"><h3>lsidarto</h3></a></li>
         <li><a href="pages/portfolio.html">portfolio</a></li> 
         <li><a href="pages/resume.html">resume {⤓}</a></li>
         <li><a href="pages/contact.html">contact</a></li>
         <li><label class="switch">
-          <!-- <i class="fas fa-adjust"></i> -->
           <div>
             <input type="checkbox" />
             <span class="slider"></span>
@@ -46,7 +41,7 @@
         <br class = "landing"><p>aspiring data scientist</p>
       </div>
       
-      <a href="#bio">[scroll]<span></span></a>
+      <a class="scroll" href="#bio">[scroll]<span></span></a>
       
       <div class = "houses">
         <img class = "layer l1" src = "resources/l1.png"><img class = "layer l2" src = "resources/l2.png"><img class = "layer l3" src = "resources/l3.png"><img class = "layer l4" src = "resources/l4.png">
@@ -142,9 +137,10 @@
       </section>
       <footer>
         <br><br>
-        <a href="#title" id='scrollup'>[back to top]<span></span></a>
-        <span>made by me :)</span><br>
+        <a href="#title" class='scroll'><span></span>[back to top]</a>
+        made by me :)
       </footer>
+      <br>
     </div>
   <!-- scripts  -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>

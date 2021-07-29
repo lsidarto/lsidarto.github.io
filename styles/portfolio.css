@@ -18,10 +18,14 @@ ul li:hover {
   transition: 0.3s;
 }
 
-ul {width: auto;
-margin-left: 5px;}
+ul {
+  width: auto;
+  margin-left: 5px;
+font-family: var(--headerFont);}
+
 ul a{text-decoration: none;}
-ul.vnav {list-style-type: none;}
+ul.vnav {
+  list-style-type: none;}
 
 div.col{
   flex: 1;
@@ -33,30 +37,17 @@ div.col:nth-of-type(even){ /*col with the content*/
   padding: 0 3%;
 }
 
-
-/* remove these 2 */
-/* div.col:nth-of-type(odd){
-  background: #85929E;
-  color: white;
-}
-div.col:nth-of-type(even){
-  background: #456069;
-  color: green;
-} */
-
-/* fieldset {
-  border: 2px solid rgba(255, 255, 255, 0.6);
-} */
-
 legend {
   margin: 0 10%;
   padding-inline: 10px;
   font-size: 200%;
   letter-spacing: .05em;
+  font-family: var(--headerFont);
+  opacity: 0.6;
 }
 
 .odd {margin-left:auto;}
-.section {padding-top: 5%;}
+.section {padding: 6% 0;}
 
 @media (max-width: 480px) {
   div.col:nth-of-type(1){ display:none} /*delete vnav*/
