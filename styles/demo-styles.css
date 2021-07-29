@@ -1,7 +1,8 @@
 :root {
   --fontColour : white;
   --subtitleColour: rgb(255, 182, 174);
-  --cardLinkColour: rgb(126, 229, 236);
+  --cardLinkHoverColour: rgb(151, 208, 212);
+  --cardLinkColour: #da7060;
   --backgroundColour : linear-gradient(to top,#4a6064, #283436,#283436);
   --overlay: rgba(0, 0, 0, 0.3);
   --navbarColour: rgba(74,96,100,1);
@@ -15,8 +16,9 @@
 
 .light_theme {
   --fontColour: rgb(35, 54, 58);
-  --subtitleColour: #BA5B4C;
-  --cardLinkColour: rgb(23, 168, 173);
+  --subtitleColour: #d37869;
+  --cardLinkColour: #772b1f;
+  --cardLinkHoverColour: rgb(23, 168, 173);
   --backgroundColour: linear-gradient(to top,#aec4c9,#dce8eb,#dce8eb);
   --overlay: rgba(255, 255, 255, 0.5);
   --navbarColour: rgb(213, 231, 235);
@@ -29,6 +31,8 @@
   padding: 0;
   color: var(--fontColour);
 }
+
+.content {background: var(--backgroundColour);}
 
 .symbol {font-family: var(--symbolFont);}
 
@@ -67,11 +71,6 @@
   transition: 0.3s;
   border-radius: 50%;
 }
-
-.content {
-  background: var(--backgroundColour);
-}
-
 
 input:checked + .slider {background-color: #283436;}
 
@@ -205,6 +204,7 @@ svg {transform: translateZ(0); /* Fix Safari rendering bug */}
   text-decoration: none;
   font-family: var(--headerFont);
   margin-bottom: 5px;
+  transition: opacity .3s;
 }
 
 /*"scroll down"*/
@@ -213,10 +213,9 @@ svg {transform: translateZ(0); /* Fix Safari rendering bug */}
   bottom: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: opacity .3s;
   color:white;
 }
-.landing a:hover {opacity: 0.9;}
+.scroll:hover {opacity: 1;}
 
 #title a span {/*arrow down*/
   position: absolute;
@@ -238,17 +237,17 @@ svg {transform: translateZ(0); /* Fix Safari rendering bug */}
 
 h2{
   font-family: var(--headerFont);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
 }
 
 h3{font-family: var(--headerFont);}
 
 .bodytext {padding-top: 5%;}
 
-.bio_text {padding-top: 10%;
-  animation: float 2s ease-in-out infinite alternate; }
-
-#biotext p {max-width: 50ch;}
+.bio_text {
+  padding-top: 10%;
+  animation: float 2s ease-in-out infinite alternate; 
+}
 
 #pfp {
   display: block;
@@ -271,6 +270,9 @@ h3{font-family: var(--headerFont);}
 }
 
 @media (max-width: 480px) { /* for mobile */
+  .filler {
+    display: none;
+  }
   .card_container{
     flex-direction: column;
     align-items: center;
@@ -288,53 +290,54 @@ h3{font-family: var(--headerFont);}
   .intro p {font-size: 5vw;}
   .switch {
     position: fixed;
-    bottom: 3%;
+    bottom: 2%;
     left: 3%;
     display: block;
     width: 40px;
     height: 20px;
   }
+  .page_head_spacer {height:10vh;}
 }
 
 .card {
-  width: 270px;
-  margin-top: 10px;
-  margin: 5px;
-  text-align: center;
-  /* background: #f0d3cf; */
+  min-width: 270px;
+  width: 30%;
+  margin: 1%;
   border-radius: 20px;
   transition: 0.3s;
-  /* box-shadow: 0 5px 10px 0 rgba(0,0,0,.2); */
   overflow: hidden;
+  background-color: var(--overlay);
+  position:relative;
 }
 
 .card_img {
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
-  width: 100%;
+  opacity: 0.1;
+  position: absolute;
   object-fit: cover;
+  width: -webkit-fill-available;
+  pointer-events: none;
 }
 
-.card_text {
-  padding-right: 2%; 
-  padding-left: 3%;
-  margin-top: 0px;
-  margin-bottom: 5px;
+.card:hover .card_img{
+  transition: 0.3s; 
+  opacity: 0;
 }
+
+.card_text {padding: 0.5vw 5%;
+  line-height: 1.2;}
 
 .card_title {
   font-family: var(--headerFont);
   color: var(--fontColour);
-  line-height: 1.1;
   text-align: left;
+  opacity:0.9;
+  padding: 2% 0;
+  line-height: 1.2;
+  font-size: 20px;
 }
 
 .card_subtitle {
   color: var(--subtitleColour);
-  /* line-height: 1.2; */
-  /* margin-top: 1%;
-  margin-bottom: 5px;
-  margin-left: 2%; */
   text-align: left;
   font-size: inherit
 }
@@ -345,10 +348,9 @@ h3{font-family: var(--headerFont);}
   margin: 2px;
 }
 
-.card_text a:hover{color: #BA5B4C;}
+.card_text a:hover{color: var(--cardLinkHoverColour);}
 
 .card_text a {
-  /* font-family: 'Solway', serif; */
   color: var(--cardLinkColour);
   font-weight: 300;
 }
@@ -357,19 +359,20 @@ h3{font-family: var(--headerFont);}
   margin-left: -12px;
   content: "";
   display: block;
-  border-bottom: 2px dashed #FFF;
+  border-bottom: 2px dashed var(--fontColour);
   animation: slide alternate 2s infinite;
+  opacity: 0.5;
 }
 @keyframes slide {to { transform: translateX(12px);} }
 
 .card_body {
   font-family: var(--bodyFont);
   padding: 1% 2%;
-  color: rgb(90, 90, 90);
+  color: inherit !important;
   font-size: 16px;
-  line-height: 1.2;
   text-align: right;
   letter-spacing: 0.01em;
+  opacity:0.8;
 }
 
 .subheading {
@@ -377,24 +380,14 @@ h3{font-family: var(--headerFont);}
   display: flex;
 }
 
-.hand{
-  animation: point alternate 1s infinite;
-}
-@keyframes point {
-  0%   { transform: translateX(0px); }
-  100% { transform: translateX(2px); }
-}
+.hand{animation: point alternate 1s infinite;}
+@keyframes point {to { transform: translateX(2px); }}
 
 footer {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
-
-#scrollup {
-  transition: opacity .3s;
-}
-#scrollup:hover {opacity: 0.9;}
 
 footer a span {
   position: absolute;

@@ -11,5 +11,5 @@ div.col:nth-of-type(even){ /*col with the content*/
 }
 
 svg{
-  fill:white;
+  fill: var(--fontColour);
 }
