@@ -32,8 +32,6 @@
   color: var(--fontColour);
 }
 
-.content {background: var(--backgroundColour);}
-
 .symbol {font-family: var(--symbolFont);}
 
 /* box around the slider */
@@ -43,6 +41,8 @@
   width: 40px;
   height: 20px;
 }
+
+.content {background: var(--backgroundColour);}
 
 .switch input {display: none;} /* hide checkbox */
 
@@ -88,7 +88,7 @@ body {font-family: var(--bodyFont);}
 
 .content {
   background: var(--backgroundColour);
-  min-height: 100vw;
+  /* min-height: 100vw; */
 }
 
 .houses {
