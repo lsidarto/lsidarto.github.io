@@ -51,6 +51,7 @@ legend {
 
 @media (max-width: 480px) {
   div.col:nth-of-type(1){ display:none} /*delete vnav*/
+  .card_body {text-align: right !important;}
 }
 
 .card_container {
@@ -58,14 +59,27 @@ legend {
   align-items: center;
 }
 
+.card_text {
+  padding: 0 5%;
+  transition: all 0.3s cubic-bezier(0.36, -0.02, 0.15, 0.98);
+  visibility: visible;
+  max-height: 1000px;
+}
+
+.card_text.active { 
+  visibility: hidden;
+  max-height: 0;
+}
+
 .card {
   width: 100%;
   border-radius: 20px;
-  margin: 1%;
+  margin: 10px;
+  padding-bottom: 2%;
 }
 
 /* .card_text { padding: 0 2% 1% 4%;}  */
-.card_title {padding-left:2%;}
+.card_title {padding-left: 5%;}
 .card_body {text-align: left;}
 
 #uni {

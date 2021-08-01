@@ -1,15 +1,19 @@
-div.col{
-  flex: 1;
-  /* margin: 10px; */
-  min-height: 100vh;
-  text-align:right;
-}
-div.col:nth-of-type(even){ /*col with the content*/
-  flex: 5;
-  /* padding: 0 3%; */
-  text-align: left;
-}
-
-svg{
+svg {
+  width: 20px;
+  height: 20px;
   fill: var(--fontColour);
 }
+
+.content {  height: 100vh;}
+
+div.row p{
+  padding-bottom: 5px;
+}
+
+div.col{flex: 1;}
+
+div.col:nth-child(1){ 
+  text-align: right;
+  padding-right: 5px;
+}
+div.col:nth-child(2){flex: 5;}

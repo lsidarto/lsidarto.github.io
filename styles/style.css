@@ -4,7 +4,7 @@
   --cardLinkHoverColour: rgb(151, 208, 212);
   --cardLinkColour: #da7060;
   --backgroundColour : linear-gradient(to top,#4a6064, #283436,#283436);
-  --overlay: rgba(0, 0, 0, 0.3);
+  --overlay: rgba(0, 0, 0, 0.4);
   --navbarColour: rgba(74,96,100,1);
   --birdColour: white;
   --pathColour: #283436;
@@ -54,7 +54,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #d7e9ec;
+  background-color: #052125;
   -webkit-transition: .4s;
   transition: .4s;
   border-radius: 20px;
@@ -67,18 +67,19 @@
   width: 14px;
   left: 4px;
   bottom: 3px;
-  background-color: #283436;
-  transition: 0.3s;
+  transition: 0.1s;
   border-radius: 50%;
+  box-shadow: inset 5px -3px 0px 0px white;
 }
 
-input:checked + .slider {background-color: #283436;}
+input:checked + .slider {background-color: #7eb8d8;}
 
 input:checked + .slider:before {
   -webkit-transform: translateX(18px);
   -ms-transform: translateX(18px);
   transform: translateX(18px);
-  background-color: #d7e9ec;
+  background-color: #fff6d4;
+  box-shadow: none;
 }
 
 html {scroll-behavior: smooth;}
@@ -152,7 +153,7 @@ svg {transform: translateZ(0); /* Fix Safari rendering bug */}
 }
 
 #nav > li > a {
-  opacity: 0.6;
+  opacity: 0.8;
   transition: 0.3s;
   text-decoration: none;
 }
@@ -334,11 +335,12 @@ h3{font-family: var(--headerFont);}
   padding: 2% 0;
   line-height: 1.2;
   font-size: 20px;
+  max-width: 75ch;
 }
 
 .card_subtitle {
   color: var(--subtitleColour);
-  text-align: left;
+  /* text-align: left; */
   font-size: inherit
 }
 
@@ -371,7 +373,6 @@ h3{font-family: var(--headerFont);}
   color: inherit !important;
   font-size: 16px;
   text-align: right;
-  letter-spacing: 0.01em;
   opacity:0.8;
 }
 
@@ -408,8 +409,6 @@ footer a span {
 
 /* for all other pages */
 .page_head_spacer{
-  min-height: 10%;
-  height: auto;
   padding-top: 10%;
   text-align:center;
 }
