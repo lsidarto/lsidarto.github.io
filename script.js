@@ -25,7 +25,6 @@ function openNav() {
     document.getElementById("vnav").style.display = "block";
     document.getElementById("opennav").style.display = "none";
     document.getElementById("closenav").style.display = "block";
-
     document.getElementById("main").style.marginLeft = "30vw";
 }
   
@@ -33,7 +32,6 @@ function openNav() {
 function closeNav() {
     document.getElementById("vnav").style.display = "none";
     document.getElementById("main").style.marginLeft = "2%";
-
     document.getElementById("opennav").style.display = "block";
     document.getElementById("closenav").style.display = "none";
 }
