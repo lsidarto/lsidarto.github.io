@@ -29,10 +29,12 @@ ul.vnav {list-style-type: none;}
   margin: 10px;
   min-height: 100vh;
 }
-.page.col:nth-of-type(even){ /*col with the content*/
+.page.col:nth-of-type(2){ /*col with the content*/
   flex: 5;
   padding: 0 3%;
+  overflow: hidden;
 }
+.page.col:nth-of-type(3){ display: contents;}
 
 table {width: 100%;}
 
@@ -62,8 +64,28 @@ legend {
 .odd {margin-left:auto;}
 .section {padding: 6% 0;}
 
+#main {transition: margin-left .5s;}
+.navtoggle {display:none;}
+
 @media (max-width: 480px) {
-  div.col:nth-of-type(1){ display:none} /*delete vnav*/
+  #closenav{display:none;}
+  #opennav {display:block;}
+  .navtoggle {
+    position: fixed;
+    bottom: 7%;
+    left: 4%;
+    z-index: 1;
+  }
+  .vertical{
+    position: fixed;
+    right: 0;
+    bottom: 15%;
+    min-height: 0;
+    height: fit-content;
+    z-index: 1;
+  }
+  .vnav{display:none;} /* this is causing issues when switching between mobile/desktop*/
+  .page.col:nth-of-type(1){display: contents;}
   .card_body {text-align: right !important;}
 }
 

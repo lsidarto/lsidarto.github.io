@@ -21,6 +21,23 @@ function nav_bg() {
     //     ul.insertBefore(li, ul.childNodes[0]);  // Insert <li> before the first child of <ul>
     // }
 }
+function openNav() {
+    document.getElementById("vnav").style.display = "block";
+    document.getElementById("opennav").style.display = "none";
+    document.getElementById("closenav").style.display = "block";
+
+    document.getElementById("main").style.marginLeft = "30vw";
+}
+  
+  /* Set the width of the side navigation to 0 */
+function closeNav() {
+    document.getElementById("vnav").style.display = "none";
+    document.getElementById("main").style.marginLeft = "2%";
+
+    document.getElementById("opennav").style.display = "block";
+    document.getElementById("closenav").style.display = "none";
+}
+
 
 // theme switch
 const themeSwitch = document.querySelector('input');
