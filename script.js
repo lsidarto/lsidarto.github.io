@@ -1,41 +1,19 @@
 window.onscroll = function() {nav_bg()};
 var header = document.getElementById("nav");
 var sticky = header.offsetTop; // Get the offset position of the navbar
-// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function nav_bg() {
   if (window.pageYOffset > sticky) {
     header.classList.add("sticky");
   } else {
     header.classList.remove("sticky");
   }
-  //add li to beginning of ul
-    // var elementTarget = document.getElementById("bio");
-    // if (window.scrollY > (elementTarget.offsetTop + elementTarget.offsetHeight)) {
-
-    //     // alert("You've scrolled past the second div");
-    //     var ul = document.getElementById("nav");
-    //     var li = document.createElement("li");
-    //     li.appendChild(document.createTextNode("Four"));
-    //     // ul.appendChild(li);
-
-    //     ul.insertBefore(li, ul.childNodes[0]);  // Insert <li> before the first child of <ul>
-    // }
 }
-function openNav() {
-    document.getElementById("vnav").style.display = "block";
-    document.getElementById("opennav").style.display = "none";
-    document.getElementById("closenav").style.display = "block";
-    document.getElementById("main").style.marginLeft = "30vw";
+
+function toggleNav() {
+    document.getElementById("vnav").classList.toggle("hidden");
+    document.getElementById("main").classList.toggle("hidden");
 }
   
-  /* Set the width of the side navigation to 0 */
-function closeNav() {
-    document.getElementById("vnav").style.display = "none";
-    document.getElementById("main").style.marginLeft = "2%";
-    document.getElementById("opennav").style.display = "block";
-    document.getElementById("closenav").style.display = "none";
-}
-
 
 // theme switch
 const themeSwitch = document.querySelector('input');

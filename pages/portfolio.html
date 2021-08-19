@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>★ lsidarto</title>
+    <title>test page</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,16 +14,16 @@
 
     <!-- fonts -->
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Karla:wght@300;600&family=Spectral&display=swap');
-    </style>
-
+      @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Karla:wght@300;600&family=Spectral&display=swap');
+      </style>
+      <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/symbola" type="text/css"/>
+  
  </head> 
  <body id="portfolio">
   <div id="nav"> 
       <li><a href = "../index.html"><h3>lsidarto</h3></a></li>
       <li>portfolio</li> 
       <li><a href="...">resume {⤓}</a></li>
-      <li><a href="../pages/contact.html">contact</a></li>
       <li><label class="switch">
         <div>
           <input type="checkbox" />
@@ -39,7 +39,7 @@
     <div class="row">
       <div class="page col">
         <div class= "vertical">
-          <ul id="vnav" class = "vnav">
+          <ul id="vnav">
           <li><a href="#pagetop" class="symbol">【⬆】</a></li>
           <li><a href="#projects"> projects</a></li>
           <li><a href="#research"> research</a></li>
@@ -50,12 +50,11 @@
           </ul>
         </div>
 
-      <span class="navtoggle" id="opennav" onclick="openNav()">open<br>menu</span>
-      <span class="navtoggle" id="closenav" onclick="closeNav()">close<br>menu</span>
+      <span class="navtoggle" onclick="toggleNav()">toggle<br>menu</span>
 
       </div>
       <div id="main" class="page col">
-        <p class="card_subtitle hand">★ click on a card to close it</p>
+        <p class="card_subtitle hand">click on a card to close it <span class="birdhop symbol">🐦</span></p>
         
         <section class="section" id="projects">
           <fieldset>
@@ -137,14 +136,14 @@
             <legend><h3>INVOLVEMENT</h3></legend>
             <div class="card_container">
               <div class="card closable_card">
-                <h2 class="card_title"><a href="https://ds3.ucsd.edu/">Data Science Student Society</a></h2>
+                <h2 class="card_title">Data Science Student Society (<a href="https://ds3.ucsd.edu/">DS3</a>)</h2>
                 <div class="card_text">
                   <h3 class="card_subtitle">Board Member, Design • Fall 2019 - Present</h3>
                   <p class="card_body">Founded and lead the organization's Design Committee.  and datahacks</p>
                 </div>
               </div>
               <div class="card closable_card">
-                <h2 class="card_title"><a href="https://tesc.ucsd.edu/">Triton Engineering Student Council</a></h2>
+                <h2 class="card_title">Triton Engineering Student Council (<a href="https://tesc.ucsd.edu/">TESC</a>)</h2>
                 <div class="card_text">
                   <h3 class="card_subtitle">Sponsorship • Fall 2019 - Fall 2020</h3>
                   <p class="card_body">DeCAF, sd hacks</p>
@@ -234,6 +233,7 @@
                         <th>MGT 153</th>
                         <td>Business Analytics</td>
                       </tr>
+                      <tr><th><br></th></tr>
 
                     </table>
                     
@@ -253,8 +253,8 @@
       <div><a href="#pagetop" class="scroll">
           <br><br><span></span>
           [back to top]</a></div>
-          made by me :)
-    </footer>
+          made by me :)&nbsp;<span class="birdhop symbol">🐦</span>
+      </footer>
     <br>
   </div>
  

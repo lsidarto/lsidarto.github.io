@@ -31,23 +31,28 @@
   padding: 0;
   color: var(--fontColour);
 }
+html {scroll-behavior: smooth; transition: 0.3s;}
+html, body { max-width: 100%; overflow-x: hidden;} 
+body {font-family: var(--bodyFont);}
+svg {transform: translateZ(0); /* Fix Safari rendering bug */}
 
+.col {flex: 1; }
+.row {display: flex;}
+h2 {
+  font-family: var(--headerFont);
+  letter-spacing: 0.02em;
+}
+h3 {font-family: var(--headerFont);}
 .symbol {font-family: var(--symbolFont);}
-
-/* box around the slider */
-.switch {
+ 
+.switch { /* box around the slider */
   position: relative;
   display: block;
   width: 40px;
   height: 20px;
 }
-
-.content {background: var(--backgroundColour);}
-
 .switch input {display: none;} /* hide checkbox */
-
-/* The slider */
-.slider {
+.slider { /* The slider */
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -59,7 +64,6 @@
   transition: .4s;
   border-radius: 20px;
 }
-
 .slider:before {
   position: absolute;
   content: "";
@@ -72,8 +76,9 @@
   box-shadow: inset 5px -3px 0px 0px white;
 }
 
-input:checked + .slider {background-color: #7eb8d8;}
+.content {background: var(--backgroundColour);}
 
+input:checked + .slider {background-color: #7eb8d8;}
 input:checked + .slider:before {
   -webkit-transform: translateX(18px);
   -ms-transform: translateX(18px);
@@ -82,22 +87,11 @@ input:checked + .slider:before {
   box-shadow: none;
 }
 
-html {scroll-behavior: smooth;}
-html, body { max-width: 100%; overflow-x: hidden;} 
-
-body {font-family: var(--bodyFont);}
-
-.content {
-  background: var(--backgroundColour);
-  /* min-height: 100vw; */
-}
-
 .houses {
   position: relative;
   width: 100%;
   height: 100vh;
 }
-
 .layer{
   position: absolute;
   width: 100%;
@@ -106,9 +100,6 @@ body {font-family: var(--bodyFont);}
   left: 0px;
   object-fit:cover;
 }
-
-svg {transform: translateZ(0); /* Fix Safari rendering bug */}
-
 .l4 {z-index: -5;}
 .l3 {z-index: -4;}
 .l2 {z-index: -2;}
@@ -119,22 +110,16 @@ svg {transform: translateZ(0); /* Fix Safari rendering bug */}
 	overflow: visible;
 	transform: translateX(-50%);
 }
-
 .path0 {
 	fill: var(--pathColour) !important;
   overflow: hidden;
 }
-
-#bird_container { /*3 birds*/
-    z-index: -3;
-    position: absolute;} 
-
+#bird_container {z-index: -3; position: absolute;} /*3 birds*/
 .path {fill: none;} 
 .bird {fill: #394463;}
 .b0 {fill: var(--birdColour) !important;}
 
-/* navbar */
-#nav {
+#nav { /* navbar */
   position: fixed;
   top: 0;
   left: 0;
@@ -144,30 +129,18 @@ svg {transform: translateZ(0); /* Fix Safari rendering bug */}
   justify-content: flex-start;
   z-index: 2;
 }
-
 #nav li {
   list-style: none;
   margin: 10px 10px;
-  text-align: center;
   letter-spacing: 0.1em;
+  text-align: center;
 }
-
 #nav > li > a {
   opacity: 0.8;
-  transition: 0.3s;
   text-decoration: none;
 }
 #nav > li > a:hover {opacity: 1;}
-
-.sticky {
-  background-color: var(--navbarColour);
-  transition: 0.5s;
-}
-
-@keyframes moveAnim {
- from { flex: none }
- to{ flex: 1 }
-}
+.sticky {background-color: var(--navbarColour);}
 
 .intro {
   position: absolute;
@@ -179,10 +152,7 @@ svg {transform: translateZ(0); /* Fix Safari rendering bug */}
   animation: float 2s ease-in-out infinite alternate; 
   mix-blend-mode: color-dodge;
 }
-
-@keyframes float {
-  to{ transform: translateY(-2%);}
-}
+@keyframes float {to{ transform: translateY(-2%);}}
 .intro p {
   font-family: var(--bodyFont);
   font-size: 2vw;
@@ -193,9 +163,6 @@ h3.header {
   color: #c0ddea !important;
 }
 
-.col {flex: 1; }
-.row {display: flex;}
-
 .scroll {
   opacity: 0.8;
   z-index: 1;
@@ -204,11 +171,8 @@ h3.header {
   text-decoration: none;
   font-family: var(--headerFont);
   margin-bottom: 5px;
-  transition: opacity .3s;
 }
-
-/*"scroll down"*/
-.landing a{
+#landing a{ /*"scroll down" text*/
   position: absolute;
   bottom: 10%;
   left: 50%;
@@ -217,7 +181,7 @@ h3.header {
 }
 .scroll:hover {opacity: 1;}
 
-.landing a span {/*arrow down*/
+#landing a span {/*arrow down*/
   position: absolute;
   bottom: -18px;
   left: 50%;
@@ -235,18 +199,11 @@ h3.header {
   40% {transform: rotate(-45deg) translate(0, 0);}
 }
 
-h2 {
-  font-family: var(--headerFont);
-  letter-spacing: 0.02em;
-}
-
-h3 {font-family: var(--headerFont);}
-
 .bodytext {padding-top: 5%;}
 
 .bio_text {
   padding-top: 10%;
-  animation: float 2s ease-in-out infinite alternate; 
+  /* animation: float 2s ease-in-out infinite alternate;  */
 }
 
 #pfp {
@@ -269,32 +226,6 @@ h3 {font-family: var(--headerFont);}
   padding: 2%;
 }
 
-@media (max-width: 480px) { /* for mobile */
-  .filler {
-    display: none;
-  }
-  .card_container{
-    flex-direction: column;
-    align-items: center;
-  }
-  .intro {
-    position: absolute;
-    right: 15vw;
-    text-align: center;
-  }
-  .header {font-size: 20vw !important;}
-  .intro p {font-size: 5vw;}
-  .switch {
-    position: fixed;
-    bottom: 2%;
-    left: 3%;
-    display: block;
-    width: 40px;
-    height: 20px;
-  }
-  .page_head_spacer {height:10vh;}
-}
-
 .card {
   min-width: 270px;
   width: 30%;
@@ -314,12 +245,13 @@ h3 {font-family: var(--headerFont);}
   pointer-events: none;
 }
 
-.card:hover .card_img{
+.card:hover .card_img {
   transition: 0.3s; 
   opacity: 0;
 }
 
-.card_text {padding: 0.5vw 5%;
+.card_text {
+  padding: 0.5vw 5%;
   line-height: 1.3;}
 
 .card_title {
@@ -335,7 +267,6 @@ h3 {font-family: var(--headerFont);}
 
 .card_subtitle {
   color: var(--subtitleColour);
-  /* text-align: left; */
   font-size: inherit
 }
 
@@ -358,7 +289,7 @@ h3 {font-family: var(--headerFont);}
   display: block;
   border-bottom: 2px dashed var(--fontColour);
   animation: slide alternate 2s infinite;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 @keyframes slide {to { transform: translateX(12px);} }
 
@@ -376,14 +307,50 @@ h3 {font-family: var(--headerFont);}
   display: flex;
 }
 
-.hand{animation: point alternate 1s infinite;}
+.hand { animation: point alternate 1s infinite; }
 @keyframes point {to { transform: translateX(2px); }}
 
-footer {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+.birdhop { 
+  animation: bhop linear 6s infinite; 
+  display: inline-block;}
+@keyframes bhop { /* there must be a better way :') */
+  30% {transform: translate(0px,0px);}
+  32% {transform: rotate(-60deg) translate(0px,-5px);}
+  34% {transform: translate(-3px,-3px);} /* hop left */
+  /* wait + peck 2 */
+  36% {transform:rotate(-60deg) translate(-3px,-5px);}
+  37% {transform:translate(-3px,0px);}
+  42% {transform: translate(-3px, 0px);}   /* wait */
+  43% {transform: rotateY(180deg)  translate(3px, 0px);}   /* flip after wait */
+  44% {transform:  rotateY(180deg) translate(5px,0px);}   /* flip */
+  /* landing */
+  46% {transform:  rotateY(180deg) translate(0px,-5px);}
+  48% {transform:  rotateY(180deg) translate(-5px,0px);}
+  58% {transform:  rotateY(180deg) translate(-5px,0px);}   /* short pause */
+  /* quick hops to the right */
+  60% {transform:  rotateY(180deg) translate(-8px,-5px);}
+  61% {transform:  rotateY(180deg) translate(-11px,0px);}
+  63% {transform:  rotateY(180deg) translate(-14px,0px);}
+  64% {transform:  rotateY(180deg) translate(-17px,-5px);}
+  65% {transform:  rotateY(180deg) translate(-20px,0px);}
+  70% {transform:  rotateY(180deg) translate(-20px,0px);}   /* short pause */
+  /* flip + wait*/
+  71% {transform: translate(20px,0px);}
+  75% {transform: translate(20px,0px);}
+  /* hop back */
+  77% {transform: translate(15px, -3px);}
+  79% {transform: translate(15px, 0px);}
+  80% {transform: translate(10px, -3px);}
+  81% {transform: translate(10px, 0px);}
+  90% {transform: translate(10px, 0px);}   /* short pause */
+  92% {transform:  translate(5px, -3px);}
+  94% {transform:  translate(5px, 0px);}
+  98% {transform:  translate(5px, 0px);}   /* short pause */
+  99% {transform:  translate(0px, -3px);}
+  100% {transform:  translate(0px,0px);}   /* return to start pos */
 }
+
+footer {text-align: center;}
 
 footer a span {
   position: absolute;
@@ -406,4 +373,46 @@ footer a span {
 .page_head_spacer{
   padding-top: 10%;
   text-align:center;
+}
+
+/* contact section */
+.contact svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--fontColour);
+}
+
+.contact div.row p{padding-bottom: 5px;}
+.contact div.col{flex: 1;}
+
+.contact div.col:nth-child(1){ 
+  text-align: right;
+  padding-right: 5px;
+}
+.contact div.col:nth-child(2){flex: 5;}
+
+@media (max-width: 480px) { /* for mobile--leave at bottom so it overrides everything*/
+  .filler {
+    display: none;
+  }
+  .card_container{
+    flex-direction: column;
+    align-items: center;
+  }
+  .intro {
+    position: absolute;
+    right: 15vw;
+    text-align: center;
+  }
+  .header {font-size: 20vw;}
+  .intro p {font-size: 5vw;}
+  .switch {
+    position: fixed;
+    bottom: 2%;
+    left: 3%;
+    display: block;
+    width: 40px;
+    height: 20px;
+  }
+  .page_head_spacer {height:10vh;}
 }
