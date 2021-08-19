@@ -176,22 +176,21 @@ svg {transform: translateZ(0); /* Fix Safari rendering bug */}
   text-align: right;
   line-height: 0.9;
   z-index: 1;
-  mix-blend-mode: color-dodge;
   animation: float 2s ease-in-out infinite alternate; 
+  mix-blend-mode: color-dodge;
 }
+
 @keyframes float {
   to{ transform: translateY(-2%);}
 }
 .intro p {
   font-family: var(--bodyFont);
   font-size: 2vw;
-  color:white;
+  color:white !important;
 }
-.header {
-  font-family: var(--accentFont);
+h3.header {
   font-size: 10vw;
   color: #c0ddea !important;
-  font-weight: 900;
 }
 
 .col {flex: 1; }
@@ -218,7 +217,7 @@ svg {transform: translateZ(0); /* Fix Safari rendering bug */}
 }
 .scroll:hover {opacity: 1;}
 
-#title a span {/*arrow down*/
+.landing a span {/*arrow down*/
   position: absolute;
   bottom: -18px;
   left: 50%;
@@ -236,12 +235,12 @@ svg {transform: translateZ(0); /* Fix Safari rendering bug */}
   40% {transform: rotate(-45deg) translate(0, 0);}
 }
 
-h2{
+h2 {
   font-family: var(--headerFont);
   letter-spacing: 0.02em;
 }
 
-h3{font-family: var(--headerFont);}
+h3 {font-family: var(--headerFont);}
 
 .bodytext {padding-top: 5%;}
 
@@ -282,12 +281,8 @@ h3{font-family: var(--headerFont);}
     position: absolute;
     right: 15vw;
     text-align: center;
-    line-height: 0.9;
-    z-index: 1;
-    mix-blend-mode: color-dodge;
-    animation: float 2s ease-in-out infinite alternate; 
   }
-  .header {font-size: 20vw;}
+  .header {font-size: 20vw !important;}
   .intro p {font-size: 5vw;}
   .switch {
     position: fixed;
