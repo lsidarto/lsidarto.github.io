@@ -227,7 +227,6 @@ h3.header {
 }
 
 .card {
-  min-width: 270px;
   width: 30%;
   margin: 1%;
   border-radius: 20px;

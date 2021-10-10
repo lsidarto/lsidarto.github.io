@@ -7,7 +7,7 @@
 }
 
 ul li:hover::before{ 
-  content: "⭑";
+  content: "⭑ ";
   font-family: var(--symbolFont);
 }
 ul li:hover {
