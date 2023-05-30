@@ -420,6 +420,10 @@ footer a span {
     height: 20px;
   }
   .page_head_spacer {height:10vh;}
-  .card {width:90%;}
+  .card {
+    padding: 2% 0;
+    width: 90%;
+  }
   .card_div {padding: 5% 0;}
+  .card{margin: 2%;}
 }

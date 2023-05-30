@@ -66,9 +66,10 @@ legend {
 #vnav.hidden {display:none;}
 #vnav {display:block;}
 .navtoggle {
+  color: var(--subtitleColour);
   position: fixed;
-  bottom: 7%;
-  left: 4%;
+  bottom: 2%;
+  left: 2%;
   z-index: 1;
   opacity: 0.5;
   transition: 0.3s;
@@ -120,8 +121,8 @@ legend {
     z-index: 1;
   }
   .page.col:nth-of-type(1){display: contents;}
-  .card_body {text-align: right !important;}
   legend {margin: 0 2%;}
-  .card_title {padding: 5% 1px 0 5%;}
+  .card_title {padding: 1px 5%;}
   legend h3 {font-size: 50%;}
+  .navtoggle {bottom: 7%;}
 }
