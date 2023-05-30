@@ -43,50 +43,52 @@ if ($("body#index").length > 0) {
     || document.documentElement.clientWidth
     || document.body.clientWidth;
 
+    //from left to right
     gsap.to(".b1", {
-    duration: 3, 
+    duration: 4, //3 
     repeat: -1,
     repeatDelay: 2,
     ease: "power1.inOut",
     motionPath:{
         path: ".path1",
         align: ".path1",
-        autoRotate: 90,
-        alignOrigin: [0.5, 0.5]
-    }});
-    gsap.to(".b2", {
-    duration: 4, 
-    repeat: -1,
-    repeatDelay: 4,
-    ease: "power1.inOut",
-    motionPath:{
-        path: ".path2",
-        align: ".path2",
-        autoRotate: 90,
-        alignOrigin: [0.5, 0.5],
-    }});
-    gsap.to(".b3", {
-    duration: 4, 
-    repeat: -1,
-    repeatDelay: 4,
-    ease: "power1.inOut",
-    motionPath:{
-        path: ".path3",
-        align: ".path3",
-        autoRotate: 90,
+        autoRotate: 80,
         alignOrigin: [0.5, 0.5]
     }});
     gsap.to(".b4", {
-        duration: 8, 
+        duration: 10, //8
         repeat: -1,
         repeatDelay: 1,
         ease: "power1.inOut",
         motionPath:{
             path: ".path4",
             align: ".path4",
-            autoRotate: 90,
+            autoRotate: 70,
             alignOrigin: [0.5, 0.5]
     }});
+    gsap.to(".b2", {
+    duration: 6, //4
+    repeat: -1,
+    repeatDelay: 4,
+    ease: "power1.inOut",
+    motionPath:{
+        path: ".path2",
+        align: ".path2",
+        autoRotate: 80,
+        alignOrigin: [0.5, 0.5],
+    }});
+    gsap.to(".b3", {
+    duration: 10,  //4
+    repeat: -1,
+    repeatDelay: 4,
+    ease: "power1.inOut",
+    motionPath:{
+        path: ".path3",
+        align: ".path3",
+        autoRotate: 60,
+        alignOrigin: [0.5, 0.5]
+    }});
+  
 
     console.clear();
 

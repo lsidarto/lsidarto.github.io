@@ -201,17 +201,20 @@ h3.header {
 
 .bodytext {padding-top: 5%;}
 
-.bio_text {
-  padding-top: 10%;
-  
-  /* animation: float 2s ease-in-out infinite alternate;  */
+.bio_text { padding-top: 10%; }
+
+#biotext { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 3%;
 }
 
 .bio_text h2 {line-height: 1em;}
 
 #pfp {
   display: block;
-  width: 9em;
+  width: 80%;
   margin-right: 5%;
   float: right;
   border-radius: 50%;
@@ -403,7 +406,7 @@ footer a span {
   }
   .intro {
     position: absolute;
-    right: 15vw;
+    right: 5vw;
     text-align: center;
   }
   .header {font-size: 20vw;}
@@ -418,4 +421,5 @@ footer a span {
   }
   .page_head_spacer {height:10vh;}
   .card {width:90%;}
+  .card_div {padding: 5% 0;}
 }
