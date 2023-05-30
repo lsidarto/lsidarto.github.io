@@ -75,22 +75,6 @@ legend {
 }
 .navtoggle:hover{opacity:1;}
 
-@media (max-width: 480px) {
-  #main.page.col {margin-left: 30vw;} /*shift right when nav shown, mobile only*/
-  #main.page.col.hidden {margin-left: 0;} /*shift right when nav shown, mobile only*/
-
-  .vertical{
-    position: fixed;
-    left: 2%;
-    bottom: 14%;
-    min-height: 0;
-    height: fit-content;
-    z-index: 1;
-  }
-  .page.col:nth-of-type(1){display: contents;}
-  .card_body {text-align: right !important;}
-  legend {margin: 0 2%;}
-}
 .card_container {
   flex-direction: column;
   align-items: center;
@@ -101,7 +85,7 @@ legend {
   padding: 0 5%;
   transition: all 0.3s cubic-bezier(0.36, -0.02, 0.15, 0.98);
   visibility: visible;
-  max-height: 1000px;
+  /* max-height: 1000px; */
 }
 .card_text.active { 
   visibility: hidden;
@@ -122,3 +106,22 @@ legend {
 .card_body {text-align: left;}
 
 #uni {padding: 0 0 0 5%;}
+
+@media (max-width: 480px) {
+  #main.page.col {margin-left: 30vw;} /*shift right when nav shown, mobile only*/
+  #main.page.col.hidden {margin-left: 0;} /*shift right when nav shown, mobile only*/
+
+  .vertical{
+    position: fixed;
+    left: 2%;
+    bottom: 14%;
+    min-height: 0;
+    height: fit-content;
+    z-index: 1;
+  }
+  .page.col:nth-of-type(1){display: contents;}
+  .card_body {text-align: right !important;}
+  legend {margin: 0 2%;}
+  .card_title {padding: 5% 1px 0 5%;}
+  legend h3 {font-size: 50%;}
+}

@@ -203,12 +203,15 @@ h3.header {
 
 .bio_text {
   padding-top: 10%;
+  
   /* animation: float 2s ease-in-out infinite alternate;  */
 }
 
+.bio_text h2 {line-height: 1em;}
+
 #pfp {
   display: block;
-  width: 10em;
+  width: 9em;
   margin-right: 5%;
   float: right;
   border-radius: 50%;
@@ -414,4 +417,5 @@ footer a span {
     height: 20px;
   }
   .page_head_spacer {height:10vh;}
+  .card {width:90%;}
 }
