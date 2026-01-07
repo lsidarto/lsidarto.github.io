@@ -23,7 +23,7 @@
   <div id="nav"> 
       <li><a href = "../index.html"><h3>lsidarto</h3></a></li>
       <li>portfolio</li> 
-      <li><a href="CV_bots.pdf">resume</a></li>
+      <li><a href="CV_lsidarto.pdf">resume</a></li>
       <li><label class="switch">
         <div>
           <input type="checkbox" />
@@ -36,9 +36,12 @@
     <section id="pagetop">
     <div class="page_head_spacer"></div>
     </section>
+    <span class="navtoggle" onclick="toggleNav()">toggle<br>menu</span>
+
     <div class="row">
-      <div class="page col">
+      <div class="page col" id="vnav">
         <div class= "vertical">
+          <h3 class="card_subtitle">【 MENU 】</h3><br>
           <ul id="vnav">
           <li><a href="#pagetop" class="symbol">&nbsp;↥&nbsp;&nbsp;&nbsp;&nbsp;</a></li><!-- spaces make it easier to hit -->
           <li><a href="#projects"> projects</a></li>
@@ -51,12 +54,8 @@
           </ul>
         </div>
 
-      <span class="navtoggle" onclick="toggleNav()">toggle<br>menu</span>
-
       </div>
       <div id="main" class="page col">
-        <p class="card_subtitle hand">【⬇】click on a card to close it</p>
-        
         <section class="section" id="projects">
           <fieldset>
             <legend class="odd"><h3>PROJECTS</h3></legend>
@@ -65,34 +64,23 @@
               <div class="card closable_card">
                 <h2 class="card_title">Graph Databases for Perovskite Solar Cell Manufacturing</h2> 
                 <div class="card_text">
-                  <div class="card_div"></div>
-                  <p class="card_links"><a href="https://lsidarto.github.io/perovskite-graph-database/"">report + demo</a></p>
+                  <!-- <div class="card_div"></div> -->
                   <h3 class="card_subtitle">Data Science Capstone</h3>
-                  <p class="card_body">Led a team of 4 students over 20 weeks to build a flexible graph database and data pipeline for the SOLEIL solar cell research lab, allowing them to analyze the massive amounts of manufacturing data they collect, and learn what produces better solar cells.<br>Won the Outstanding Capstone Project Award, out of 66 projects and 230+ students! 🙌
+                  <p class="card_body">Led a team of 4 students over 20 weeks to build a flexible graph database and data pipeline for the SOLEIL solar cell research lab, allowing them to analyze the massive amounts of manufacturing data they collect, and learn what produces better solar cells. <i>Won the Outstanding Capstone Project Award, out of 66 projects and 230+ students 🙌</i>
                     <br><br>• Shortened runtime from exponential (proportional to data volume) to linear by implementing and testing the performance of three databases - tabular, relational, and graph (Neo4j) based.
-                    <br>• Implemented backwards-compatible data pipeline in Python to match the lab’s existing workflow; created onboarding materials and ran live demos for lab members. 
-                    <br>• I also made the report website!
-                  </p></div>
+                    <br>• Implemented backwards-compatible data pipeline in Python to match the lab’s existing workflow; created onboarding materials and ran live demos for lab members.
+                    <br>• I made the <a href="https://lsidarto.github.io/perovskite-graph-database/"">report + demo website</a>.
+                  </p>
                 </div>
-
-              <div class="card closable_card">
-                <h2 class="card_title">This Website</h2> 
-                <div class="card_text">
-                  <div class="card_div"></div>
-                  <p class="card_links"><a href="https://github.com/lsidarto/lsidarto.github.io">github</a></p>
-                  <h3 class="card_subtitle">Self-directed project, educational milestone</h3>
-                  <p class="card_body">Using front-end webdev skills to create a living portfolio!</p></div>
-              </div>
+                </div>
 
               <div class="card closable_card">
                 <h2 class="card_title">Gender Analysis on NYPD Complaints</h2>
                 <div class="card_text">
-                  <div class="card_div"></div>
-                  <p class="card_links"><a href="https://github.com/lsidarto/Gender-Analysis-on-NYPD-Complaints">report</a></p>
                   <h3 class="card_subtitle">A Statistical Exploration</h3>
                   <p class="card_body">Employing exploratory data analysis techniques, machine learning, and statistical methods to unearth relationships in this dataset.
                     <br><br>• Built a logistic regression model with feature engineering and optimized parameters to predict gender bias in complaint outcomes; evaluated model fairness and generated data visualizations using Matplotlib.
-                    <br>• Conclusion: women have an advantage of 2% as compared to men--but no statistically significant bias exists in 2019.
+                    <br>• <a href="https://github.com/lsidarto/Gender-Analysis-on-NYPD-Complaints">Conclusion:</a> women have an advantage of 2% as compared to men--but no statistically significant bias exists in 2019.
                   </p>
                 </div>
               </div>
@@ -100,13 +88,10 @@
               <div class="card closable_card">
                 <h2 class="card_title"><a href="http://datahacks.tech/">DataHacks 2021</a></h2>
                 <div class="card_text">
-                  <div class="card_div"></div>
-                  <p class="card_links"><a href="https://github.com/lsidarto/Gender-Analysis-on-NYPD-Complaints">report</a></p>
                   <h3 class="card_subtitle">Religious Text Analysis</h3>
-                  <p class="card_body">A report prepared in 36 hours for DataHacks, UCSD's premier machine learning/data science hackathon. (I also singlehandedly did the design and branding for this event!)
+                  <p class="card_body">A <a href="https://github.com/lsidarto/Gender-Analysis-on-NYPD-Complaints">report</a> prepared in 36 hours for DataHacks, UCSD's premier machine learning/data science hackathon. (I also singlehandedly did the design and branding for this event!)
                       <br><br>• Analyzed a dataset on word usage and frequency in given religious texts.
                       <br>• Used a logistic regression classification model to differentiate choice of diction between chronologically related books.
-
                 </div>
               </div>
             </div>
@@ -134,16 +119,13 @@
             <legend class="odd"><h3>WORK</h3></legend>
             <div class="card_container">
               <div class="card closable_card">
-                <h2 class="card_title"><a href="https://bizbaz.tech/">Deloitte Consulting</a></h2>
+                <h2 class="card_title">Deloitte Consulting</h2>
                 <div class="card_text">
+                  <h3 class="card_subtitle">AI & Data Consultant, Government and Public Services • Jun 2023 – Jul 2025</h3>
+                  <br>
                   <h3 class="card_subtitle">Strategy & Analytics Intern, Government and Public Services • Jun – Aug 2022</h3>
-                  <p class="card_body">Served a major US government sector (near 500,000 members) as a client on a cloud migration initiative.
-                    <br><br>• Collaborated with 5 other interns to shift internal operations to Microsoft Teams, streamlining PMO team’s workflow.
-                    <br>• Revamped and delivered several client deliverables, expediting project phase completion time.
-                    <br>• Authored materials promoting the team’s accomplishments and vision, to win future and continuous work from client.
-                    <br>• Prepared resources for weekly, monthly, and ad-hoc meetings with client; attended meetings, took minutes, and documented action items for greater accountability on both sides.
-                    <br>• Independently achieved an AWS Cloud Practitioner certification while shadowing cybersecurity and cloud engineering team.
-                  </div>
+            
+                </div>
               </div>
 
               <div class="card closable_card">
@@ -361,7 +343,6 @@
       <div><a href="#pagetop" class="scroll">
           <br><br><span></span>
           [back to top]</a></div>
-          made by me :)&nbsp;<span class="birdhop symbol">🐦</span>
       </footer>
     <br>
   </div>

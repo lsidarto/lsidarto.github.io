@@ -63,8 +63,9 @@ legend {
 .section {padding: 6% 0;}
 
 #main {transition: margin-left .5s;}
-#vnav.hidden {display:none;}
 #vnav {display:block;}
+#vnav.hidden {display: none;}
+
 .navtoggle {
   color: var(--subtitleColour);
   position: fixed;
@@ -84,9 +85,10 @@ legend {
 /* card opening */
 .card_text {
   padding: 0 5%;
-  transition: all 0.3s cubic-bezier(0.36, -0.02, 0.15, 0.98);
+  transition: all 0.5s ease-in-out;
   visibility: visible;
-  /* max-height: 1000px; */
+  max-height: 1000px;
+  color: var(--fontColour);
 }
 .card_text.active { 
   visibility: hidden;
@@ -104,7 +106,6 @@ legend {
   padding-bottom: 2%;
 } 
 .card_title {padding: 2% 1px 0 5%;}
-.card_body {text-align: left;}
 
 #uni {padding: 0 0 0 5%;}
 
@@ -126,3 +127,5 @@ legend {
   legend h3 {font-size: 50%;}
   .navtoggle {bottom: 7%;}
 }
+
+fieldset {border: 2px solid var(--navbarColour)}

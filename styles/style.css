@@ -1,5 +1,5 @@
 :root {
-  --fontColour : white;
+  --fontColour : #c3d3d5;
   --subtitleColour: rgb(231, 163, 156);
   --cardLinkHoverColour: rgb(151, 208, 212);
   --cardLinkColour: #ff7965;
@@ -140,12 +140,15 @@ input:checked + .slider:before {
   text-decoration: none;
 }
 #nav > li > a:hover {opacity: 1;}
-.sticky {background-color: var(--navbarColour);}
+.sticky {
+  background-color: var(--navbarColour);
+  transition: background-color 1s ease-in-out; 
+}
 
 .intro {
   position: absolute;
   top: 40vh;
-  right: 5vw;
+  right: 7vw;
   text-align: right;
   line-height: 0.9;
   z-index: 1;
@@ -160,7 +163,7 @@ input:checked + .slider:before {
 }
 h3.header {
   font-size: 10vw;
-  color: #c0ddea !important;
+  color: #faeec0 !important;
 }
 
 .scroll {
@@ -188,8 +191,8 @@ h3.header {
   width: 18px;
   height: 18px;
   margin-left: -9.5px;
-  border-left: 2px solid #fff;
-  border-bottom: 2px solid #fff;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
   transform: rotate(-45deg);
   animation: arrowdown 2s infinite;
 }
@@ -288,7 +291,7 @@ h3.header {
   font-weight: 300;
 }
 
-.card_div::before { /* dotted line dividers*/
+ .card_div::before {  /* dotted line dividers */
   margin-left: -12px;
   content: "";
   display: block;
@@ -300,10 +303,9 @@ h3.header {
 
 .card_body {
   font-family: var(--bodyFont);
-  padding: 1% 2%;
+  padding: 2% 0%;
   color: inherit !important;
   font-size: 16px;
-  text-align: right;
   opacity:0.8;
 }
 
@@ -315,46 +317,6 @@ h3.header {
 .hand { animation: point alternate 1s infinite; }
 @keyframes point {to { transform: translateX(2px); }}
 
-.birdhop { 
-  animation: bhop linear 6s infinite; 
-  display: inline-block;}
-@keyframes bhop { /* there must be a better way :') */
-  30% {transform: translate(0px,0px);}
-  32% {transform: rotate(-60deg) translate(0px,-5px);}
-  34% {transform: translate(-3px,-3px);} /* hop left */
-  /* wait + peck 2 */
-  36% {transform:rotate(-60deg) translate(-3px,-5px);}
-  37% {transform:translate(-3px,0px);}
-  42% {transform: translate(-3px, 0px);}   /* wait */
-  43% {transform: rotateY(180deg)  translate(3px, 0px);}   /* flip after wait */
-  44% {transform:  rotateY(180deg) translate(5px,0px);}   /* flip */
-  /* landing */
-  46% {transform:  rotateY(180deg) translate(0px,-5px);}
-  48% {transform:  rotateY(180deg) translate(-5px,0px);}
-  58% {transform:  rotateY(180deg) translate(-5px,0px);}   /* short pause */
-  /* quick hops to the right */
-  60% {transform:  rotateY(180deg) translate(-8px,-5px);}
-  61% {transform:  rotateY(180deg) translate(-11px,0px);}
-  63% {transform:  rotateY(180deg) translate(-14px,0px);}
-  64% {transform:  rotateY(180deg) translate(-17px,-5px);}
-  65% {transform:  rotateY(180deg) translate(-20px,0px);}
-  70% {transform:  rotateY(180deg) translate(-20px,0px);}   /* short pause */
-  /* flip + wait*/
-  71% {transform: translate(20px,0px);}
-  75% {transform: translate(20px,0px);}
-  /* hop back */
-  77% {transform: translate(15px, -3px);}
-  79% {transform: translate(15px, 0px);}
-  80% {transform: translate(10px, -3px);}
-  81% {transform: translate(10px, 0px);}
-  90% {transform: translate(10px, 0px);}   /* short pause */
-  92% {transform:  translate(5px, -3px);}
-  94% {transform:  translate(5px, 0px);}
-  98% {transform:  translate(5px, 0px);}   /* short pause */
-  99% {transform:  translate(0px, -3px);}
-  100% {transform:  translate(0px,0px);}   /* return to start pos */
-}
-
 footer {text-align: center;}
 
 footer a span {
@@ -363,8 +325,8 @@ footer a span {
   height: 18px;
   margin-left: 25px;
   margin-top:-15px;
-  border-left: 2px solid var(--fontColour);
-  border-top: 2px solid var(--fontColour);
+  border-left: 1px solid var(--fontColour);
+  border-top: 1px solid var(--fontColour);
   transform: rotate(45deg);
   animation: arrowup 2s infinite;
 }
